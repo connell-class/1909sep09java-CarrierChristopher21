@@ -2,7 +2,7 @@ package com.revature.eval.java.core;
 
 import java.time.temporal.Temporal;
 import java.util.List;
-import java.util.Map;
+
 
 public class EvaluationService {
 
@@ -159,8 +159,12 @@ public class EvaluationService {
 	/*	Question 4
 	public int getScrabbleScore(String string) {
 		// TODO Write an implementation for this method declaration
+
+		
+		
 		return 0;
 	}
+
 */
 	
 	/**	Question 5
@@ -589,12 +593,23 @@ public class EvaluationService {
 	 * @param set
 	 * @return
 	 */
-	/*	Question 18
+//	/*	Question 18
 	public int getSumOfMultiples(int i, int[] set) {
 		// TODO Write an implementation for this method declaration
+		int sum = 0;
+		
+		System.out.println("hi " + i);
+		for ( ;i < 1000; i++) {
+			
+			if(i % 3 == 0 || i %5 == 0) {
+				sum += i;
+			}
+		}
+		System.out.println(sum);
+		System.out.println(i);
 		return 0;
 	}
-*/
+//*/
 	
 	/**	Question 19
 	 * 19. Given a number determine whether or not it is valid per the Luhn formula.
@@ -666,10 +681,10 @@ public class EvaluationService {
 	 * @param string
 	 * @return
 	 */
-	//	Question 20
+//	/*//	Question 20
 	public int solveWordProblem(String string) {
 		// TODO Write an implementation for this method declaration
 		return 0;
 	}
-
+//	*/
 }

@@ -155,7 +155,7 @@ public class EvaluationServiceTest {
 	public void testALongMixCaseWord() {
 		assertEquals(41, evaluationService.getScrabbleScore("OxyphenButazone"));
 	}
-*/
+ */
 	/*******************************************************************
 	 * Question 5
 	 ******************************************************************/
@@ -624,7 +624,7 @@ public class EvaluationServiceTest {
 	/*******************************************************************
 	 * Question 18
 	 ******************************************************************/
-	/*	Question 18
+//	/*	Question 18
 	@Test
 	public void testSumOfMultiplesOf4and6UpToFifteen() {
 
@@ -669,7 +669,7 @@ public class EvaluationServiceTest {
 		assertEquals(4950, output);
 
 	}
-*/
+//*/
 	/*******************************************************************
 	 * Question 19
 	 ******************************************************************/
@@ -702,7 +702,7 @@ public class EvaluationServiceTest {
 	/*******************************************************************
 	 * Question 20
 	 ******************************************************************/
-//	/*	Question 20
+	/*	Question 20
 	
 	@Test
 	public void testSingleAddition1() {
@@ -728,5 +728,5 @@ public class EvaluationServiceTest {
 	public void testSingleDivision() {
 		assertEquals(-11, evaluationService.solveWordProblem("What is 33 divided by -3?"));
 	}
-//*/
+*/
 }
