@@ -2,17 +2,18 @@ package com.revature.eval.java.core;
 
 import java.time.temporal.Temporal;
 import java.util.List;
-import java.util.Map;
+
 
 public class EvaluationService {
 
-	/**
+	/**	Question 1 - PASS
 	 * 1. Without using the StringBuilder or StringBuffer class, write a method that
 	 * reverses a String. Example: reverse("example"); -> "elpmaxe"
 	 * 
 	 * @param string
 	 * @return
 	 */
+	/*	Question 1 - Pass
 	public String reverse(String string) {
 		char[] reversed = new char[string.length()];
 		for (int i = reversed.length - 1, j=0; i >= 0; i--, j++) {
@@ -20,8 +21,9 @@ public class EvaluationService {
 		}
 		return new String(reversed);
 	}
-
-	/**
+*/
+	
+	/**	Question 2
 	 * 2. Convert a phrase to its acronym. Techies love their TLA (Three Letter
 	 * Acronyms)! Help generate some jargon by writing a program that converts a
 	 * long name like Portable Network Graphics to its acronym (PNG).
@@ -29,12 +31,21 @@ public class EvaluationService {
 	 * @param phrase
 	 * @return
 	 */
+	/*	Question 2
 	public String acronym(String phrase) {
 		// TODO Write an implementation for this method declaration
+//		String word;
+//		for(int i = 1; i< phrase.length() -1; i++) {
+//			
+//			System.out.println();
+//			//	i
+//			//	return i;
+//		}
 		return null;
 	}
-
-	/**
+*/
+	
+	/**	Question 3- PASS
 	 * 3. Determine if a triangle is equilateral, isosceles, or scalene. An
 	 * equilateral triangle has all three sides the same length. An isosceles
 	 * triangle has at least two sides the same length. (It is sometimes specified
@@ -43,6 +54,7 @@ public class EvaluationService {
 	 * different lengths.
 	 *
 	 */
+	/*	Question 3 - Pass
 	static class Triangle {
 		private double sideOne;
 		private double sideTwo;
@@ -83,24 +95,53 @@ public class EvaluationService {
 			this.sideThree = sideThree;
 		}
 
-		public boolean isEquilateral() {
+		public boolean isEquilateral() {	//	All same number
 			// TODO Write an implementation for this method declaration
-			return false;
+			if(this.getSideOne() == this.getSideTwo()){
+				if(this.getSideOne() == this.getSideThree()) {
+					return true;
+				}else 
+					return false;
+				
+			}else 
+				return false;
+						
+			
 		}
 
-		public boolean isIsosceles() {
+		public boolean isIsosceles() {		//	2 sides same 1 off
 			// TODO Write an implementation for this method declaration
-			return false;
+			if(this.getSideOne() == this.getSideTwo()) {
+				return true;
+			}
+			else if(this.getSideOne() == this.getSideThree()) {
+				return true;
+			}
+			else if(this.getSideTwo() == this.getSideThree()) {
+				return true;
+			}else
+				return false;
+			
 		}
 
-		public boolean isScalene() {
+		public boolean isScalene() {		//	3 different sides number
 			// TODO Write an implementation for this method declaration
-			return false;
+			if(this.getSideOne() != this.getSideTwo()) {
+				if(this.getSideOne() != this.getSideThree()) 
+					return true;
+				else if(this.getSideTwo() != this.getSideThree()) 
+					return true;
+				return true;
+				
+			}else
+				return false;
+			
 		}
 
 	}
-
-	/**
+*/
+	
+	/**	Question 4
 	 * 4. Given a word, compute the scrabble score for that word.
 	 * 
 	 * --Letter Values-- Letter Value A, E, I, O, U, L, N, R, S, T = 1; D, G = 2; B,
@@ -115,12 +156,18 @@ public class EvaluationService {
 	 * @param string
 	 * @return
 	 */
+	/*	Question 4
 	public int getScrabbleScore(String string) {
 		// TODO Write an implementation for this method declaration
+
+		
+		
 		return 0;
 	}
 
-	/**
+*/
+	
+	/**	Question 5
 	 * 5. Clean up user-entered phone numbers so that they can be sent SMS messages.
 	 * 
 	 * The North American Numbering Plan (NANP) is a telephone numbering system used
@@ -151,12 +198,14 @@ public class EvaluationService {
 	 * Note: As this exercise only deals with telephone numbers used in
 	 * NANP-countries, only 1 is considered a valid country code.
 	 */
+	/*	Question 5
 	public String cleanPhoneNumber(String string) {
 		// TODO Write an implementation for this method declaration
 		return null;
 	}
-
-	/**
+*/
+	
+	/**	Question 6
 	 * 6. Given a phrase, count the occurrences of each word in that phrase.
 	 * 
 	 * For example for the input "olly olly in come free" olly: 2 in: 1 come: 1
@@ -165,12 +214,14 @@ public class EvaluationService {
 	 * @param string
 	 * @return
 	 */
+	/*	Question 6
 	public Map<String, Integer> wordCount(String string) {
 		// TODO Write an implementation for this method declaration
 		return null;
 	}
-
-	/**
+*/
+	
+	/**	Question 7
 	 * 7. Implement a binary search algorithm.
 	 * 
 	 * Searching a sorted collection is a common task. A dictionary is a sorted list
@@ -205,6 +256,7 @@ public class EvaluationService {
 	 * binary search is a dichotomic divide and conquer search algorithm.
 	 * 
 	 */
+	/*	Question 7
 	static class BinarySearch<T> {
 		private List<T> sortedList;
 
@@ -227,8 +279,9 @@ public class EvaluationService {
 		}
 
 	}
-
-	/**
+*/
+	
+	/**	Question 8
 	 * 8. Implement a program that translates from English to Pig Latin.
 	 * 
 	 * Pig Latin is a made-up children's language that's intended to be confusing.
@@ -245,12 +298,14 @@ public class EvaluationService {
 	 * @param string
 	 * @return
 	 */
+	/*	Question 8
 	public String toPigLatin(String string) {
 		// TODO Write an implementation for this method declaration
 		return null;
 	}
-
-	/**
+*/
+	
+	/**	Question 9 - Pass
 	 * 9. An Armstrong number is a number that is the sum of its own digits each
 	 * raised to the power of the number of digits.
 	 * 
@@ -265,12 +320,46 @@ public class EvaluationService {
 	 * @param input
 	 * @return
 	 */
+	/*	Question 9 - Pass
+//	Inspired from: https://www.javatpoint.com/armstrong-number-in-java
+//	https://www.programiz.com/java-programming/examples/armstrong-number
 	public boolean isArmstrongNumber(int input) {
 		// TODO Write an implementation for this method declaration
-		return false;
-	}
+		int br = 0, statsis, calc = 0, n = 0;
+		
+		
+		statsis = input;	//	duplicate digit for loop
+		
+		 for (;statsis != 0; statsis /= 10, ++n);
+		 
+	 	statsis = input;	//	duplicate digit for loop
+		 
+	 	for (;statsis != 0; statsis /= 10)
+        {
+            br = statsis % (10);
+            calc += Math.pow(br, n);
+        }
 
-	/**
+		 	
+//		while(input != 0) {
+//			br = input % 10;
+//			input /=  10;
+//			calc += Math.pow(br, 3);//(blast * blast * blast);
+//		}
+		
+		if(input == calc) {
+			System.out.println("We are GO for lift off! " + input +
+					" == " + calc);
+			return true;
+		}else{
+			System.out.println("We have a problem Houston! " + input + 
+					" != " + calc);
+			return false;
+		}
+	}
+*/
+	
+	/**	Question 10
 	 * 10. Compute the prime factors of a given natural number.
 	 * 
 	 * A prime number is only evenly divisible by itself and 1.
@@ -280,12 +369,14 @@ public class EvaluationService {
 	 * @param l
 	 * @return
 	 */
+	/*	Question 10
 	public List<Long> calculatePrimeFactorsOf(long l) {
 		// TODO Write an implementation for this method declaration
 		return null;
 	}
-
-	/**
+*/
+	
+	/**	Question 11
 	 * 11. Create an implementation of the rotational cipher, also sometimes called
 	 * the Caesar cipher.
 	 * 
@@ -311,6 +402,7 @@ public class EvaluationService {
 	 * gur ynml qbt. ROT13 Gur dhvpx oebja sbk whzcf bire gur ynml qbt. gives The
 	 * quick brown fox jumps over the lazy dog.
 	 */
+	/*	Question 11
 	static class RotationalCipher {
 		private int key;
 
@@ -325,8 +417,9 @@ public class EvaluationService {
 		}
 
 	}
-
-	/**
+*/
+	
+	/**	Question 12
 	 * 12. Given a number n, determine what the nth prime is.
 	 * 
 	 * By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see
@@ -338,12 +431,14 @@ public class EvaluationService {
 	 * @param i
 	 * @return
 	 */
+	/*	Question 12
 	public int calculateNthPrime(int i) {
 		// TODO Write an implementation for this method declaration
 		return 0;
 	}
-
-	/**
+*/
+	
+	/**	Questions 13 & 14
 	 * 13 & 14. Create an implementation of the atbash cipher, an ancient encryption
 	 * system created in the Middle East.
 	 * 
@@ -367,32 +462,36 @@ public class EvaluationService {
 	 * rxpyi ldmul cqfnk hlevi gsvoz abwlt gives thequickbrownfoxjumpsoverthelazydog
 	 *
 	 */
+	//	Question 13 & 14
 	static class AtbashCipher {
 
-		/**
+		/**	Question 13
 		 * Question 13
 		 * 
 		 * @param string
 		 * @return
 		 */
+	/*	Question 13
 		public static String encode(String string) {
 			// TODO Write an implementation for this method declaration
 			return null;
 		}
-
-		/**
+*/
+		/**	Question 14
 		 * Question 14
 		 * 
 		 * @param string
 		 * @return
 		 */
+		/*	Question 14
 		public static String decode(String string) {
 			// TODO Write an implementation for this method declaration
 			return null;
 		}
+		*/
 	}
 
-	/**
+	/**	Question 15
 	 * 15. The ISBN-10 verification process is used to validate book identification
 	 * numbers. These normally contain dashes and look like: 3-598-21508-8
 	 * 
@@ -414,12 +513,14 @@ public class EvaluationService {
 	 * @param string
 	 * @return
 	 */
+	/*	Question 15
 	public boolean isValidIsbn(String string) {
 		// TODO Write an implementation for this method declaration
 		return false;
 	}
-
-	/**
+*/
+	
+	/**	Question 16 - PASS
 	 * 16. Determine if a sentence is a pangram. A pangram (Greek: παν γράμμα, pan
 	 * gramma, "every letter") is a sentence using every letter of the alphabet at
 	 * least once. The best known English pangram is:
@@ -432,12 +533,38 @@ public class EvaluationService {
 	 * @param string
 	 * @return
 	 */
+	/*	Question 16 - PASS
 	public boolean isPangram(String string) {
 		// TODO Write an implementation for this method declaration
-		return false;
+		char letter[] = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j',
+				'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v',
+				'w', 'x', 'y', 'z'};
+		String let = null;
+		for(int i = 0; i <= 25; i++) {
+			
+			let = "" + letter[i];
+			if(!string.contains(let)) {
+				//	System.out.print(let);
+				
+				return false;
+			}
+			
+		}
+		//	System.out.print( "\n");
+		
+		return true;
 	}
-
-	/**
+//		while(i <= 25) {
+//			if(i <= 25) {
+//				
+//			}else if()
+//		}
+//	public void getString() {
+//			
+//	}
+//*/
+	
+	/**	Question 17
 	 * 17. Calculate the moment when someone has lived for 10^9 seconds.
 	 * 
 	 * A gigasecond is 109 (1,000,000,000) seconds.
@@ -445,12 +572,15 @@ public class EvaluationService {
 	 * @param given
 	 * @return
 	 */
+	/*	Question 17
 	public Temporal getGigasecondDate(Temporal given) {
 		// TODO Write an implementation for this method declaration
+		
 		return null;
 	}
-
-	/**
+*/
+	
+	/**	Question 18
 	 * 18. Given a number, find the sum of all the unique multiples of particular
 	 * numbers up to but not including that number.
 	 * 
@@ -463,12 +593,25 @@ public class EvaluationService {
 	 * @param set
 	 * @return
 	 */
+//	/*	Question 18
 	public int getSumOfMultiples(int i, int[] set) {
 		// TODO Write an implementation for this method declaration
+		int sum = 0;
+		
+		System.out.println("hi " + i);
+		for ( ;i < 1000; i++) {
+			
+			if(i % 3 == 0 || i %5 == 0) {
+				sum += i;
+			}
+		}
+		System.out.println(sum);
+		System.out.println(i);
 		return 0;
 	}
-
-	/**
+//*/
+	
+	/**	Question 19
 	 * 19. Given a number determine whether or not it is valid per the Luhn formula.
 	 * 
 	 * The Luhn algorithm is a simple checksum formula used to validate a variety of
@@ -504,12 +647,14 @@ public class EvaluationService {
 	 * @param string
 	 * @return
 	 */
+	/*	Question 19
 	public boolean isLuhnValid(String string) {
 		// TODO Write an implementation for this method declaration
 		return false;
 	}
-
-	/**
+*/
+	
+	/**	Question 20
 	 * 20. Parse and evaluate simple math word problems returning the answer as an
 	 * integer.
 	 * 
@@ -536,9 +681,10 @@ public class EvaluationService {
 	 * @param string
 	 * @return
 	 */
+//	/*//	Question 20
 	public int solveWordProblem(String string) {
 		// TODO Write an implementation for this method declaration
 		return 0;
 	}
-
+//	*/
 }
