@@ -53,7 +53,8 @@ public class EvaluationServiceTest {
 	@Test
 	public void testAPalindrome() {
 		assertEquals("racecar", evaluationService.reverse("racecar"));
-	}*/
+	}
+	*/
 
 	/*******************************************************************
 	 * Question 2
@@ -624,7 +625,7 @@ public class EvaluationServiceTest {
 	/*******************************************************************
 	 * Question 18
 	 ******************************************************************/
-//	/*	Question 18
+	/*	Question 18
 	@Test
 	public void testSumOfMultiplesOf4and6UpToFifteen() {
 
@@ -669,7 +670,7 @@ public class EvaluationServiceTest {
 		assertEquals(4950, output);
 
 	}
-//*/
+*/
 	/*******************************************************************
 	 * Question 19
 	 ******************************************************************/

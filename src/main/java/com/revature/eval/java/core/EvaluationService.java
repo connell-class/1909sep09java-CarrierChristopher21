@@ -217,6 +217,9 @@ public class EvaluationService {
 	/*	Question 6
 	public Map<String, Integer> wordCount(String string) {
 		// TODO Write an implementation for this method declaration
+		
+		
+		
 		return null;
 	}
 */
@@ -463,6 +466,7 @@ public class EvaluationService {
 	 *
 	 */
 	//	Question 13 & 14
+	/*
 	static class AtbashCipher {
 
 		/**	Question 13
@@ -488,8 +492,8 @@ public class EvaluationService {
 			// TODO Write an implementation for this method declaration
 			return null;
 		}
-		*/
-	}
+		
+	}*/
 
 	/**	Question 15
 	 * 15. The ISBN-10 verification process is used to validate book identification
@@ -580,7 +584,7 @@ public class EvaluationService {
 	}
 */
 	
-	/**	Question 18
+	/**	Question 18	-	Need Finish
 	 * 18. Given a number, find the sum of all the unique multiples of particular
 	 * numbers up to but not including that number.
 	 * 
@@ -593,23 +597,52 @@ public class EvaluationService {
 	 * @param set
 	 * @return
 	 */
-//	/*	Question 18
+	/*	Question 18
+	 * set replaces 3 or 5
+	 * i replaces 20
+	 * find output
 	public int getSumOfMultiples(int i, int[] set) {
 		// TODO Write an implementation for this method declaration
+
+		int mult[] = null;
+		
 		int sum = 0;
+		int num = i;
+		for(int r = 0; r < set.length; r++) {
+			int number = set[r];  
+			System.out.println(number);
+			if(i > sum) {
+				sum = number * ((number + 1) / 2);
+			}
+			
+			
+			sum += number;			
+		}
+		System.out.println(sum + " yo");
+		int number = set[0];  
+
+		
 		
 		System.out.println("hi " + i);
-		for ( ;i < 1000; i++) {
-			
-			if(i % 3 == 0 || i %5 == 0) {
-				sum += i;
+//		System.out.println("output " + set);
+
+		for (int j=0;j < set.length; j++) {	
+			int [] multiple = new int[i / set[j]];
+			for(int a = 0; a<multiple.length;a++) {
+				multiple[a] = set[j] * (a+1);
+				
 			}
+			
+			
 		}
+	
+		
 		System.out.println(sum);
 		System.out.println(i);
+		System.out.println("");
 		return 0;
 	}
-//*/
+*/
 	
 	/**	Question 19
 	 * 19. Given a number determine whether or not it is valid per the Luhn formula.
