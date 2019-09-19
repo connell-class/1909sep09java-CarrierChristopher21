@@ -4,6 +4,7 @@ import java.time.temporal.Temporal;
 import java.util.List;
 
 
+//@SuppressWarnings("unused")
 public class EvaluationService {
 
 	/**	Question 1 - PASS
@@ -23,7 +24,7 @@ public class EvaluationService {
 	}
 */
 	
-	/**	Question 2
+	/**	Question 2 - Need Finish
 	 * 2. Convert a phrase to its acronym. Techies love their TLA (Three Letter
 	 * Acronyms)! Help generate some jargon by writing a program that converts a
 	 * long name like Portable Network Graphics to its acronym (PNG).
@@ -45,7 +46,7 @@ public class EvaluationService {
 	}
 */
 	
-	/**	Question 3- PASS
+	/**	Question 3	- PASS
 	 * 3. Determine if a triangle is equilateral, isosceles, or scalene. An
 	 * equilateral triangle has all three sides the same length. An isosceles
 	 * triangle has at least two sides the same length. (It is sometimes specified
@@ -141,7 +142,7 @@ public class EvaluationService {
 	}
 */
 	
-	/**	Question 4
+	/**	Question 4	- Pass
 	 * 4. Given a word, compute the scrabble score for that word.
 	 * 
 	 * --Letter Values-- Letter Value A, E, I, O, U, L, N, R, S, T = 1; D, G = 2; B,
@@ -159,10 +160,66 @@ public class EvaluationService {
 	/*	Question 4
 	public int getScrabbleScore(String string) {
 		// TODO Write an implementation for this method declaration
-
+		string = string.toUpperCase();
+//		char [] arrayWord = string.toCharArray();
 		
+		int score = 0;
+		for(int count = 0; count < string.length(); count++) {
+			switch(string.charAt(count)) {
+			case 'A':
+			case 'E':
+			case 'I':
+			case 'O':
+			case 'U':
+			case 'L':
+			case 'N':
+			case 'R':
+			case 'S':
+			case 'T':
+				score += 1;
+//				System.out.println(score);
+				break;
+			case 'D':
+			case 'G':
+				score += 2;
+//				System.out.println(score);
+				break;
+			case 'B':
+			case 'C':
+			case 'M':
+			case 'P':
+				score += 3;
+//				System.out.println(score);
+				break;
+			case 'F':
+			case 'H':
+			case 'V':
+			case 'W':
+			case 'Y':
+				score += 4;
+//				System.out.println(score);
+				break;
+			case 'K':
+				score += 5;
+//				System.out.println(score);
+				break;
+			case 'J':
+			case 'X':
+				score += 8;
+//				System.out.println(score);
+				break;
+			case 'Q':
+			case 'Z':
+				score += 10;
+//				System.out.println(score);
+				break;
+			}
+		}
 		
-		return 0;
+		System.out.println(string + " is equivalent to " + score);
+//		string.charAt(num);		
+		
+		return score;
 	}
 
 */
@@ -362,7 +419,7 @@ public class EvaluationService {
 	}
 */
 	
-	/**	Question 10
+	/**	Question 10 - Need Finish
 	 * 10. Compute the prime factors of a given natural number.
 	 * 
 	 * A prime number is only evenly divisible by itself and 1.
@@ -375,6 +432,19 @@ public class EvaluationService {
 	/*	Question 10
 	public List<Long> calculatePrimeFactorsOf(long l) {
 		// TODO Write an implementation for this method declaration
+		long prime = 0;
+		boolean proof = false;
+		double root = 0;
+//		boolean guess = true;
+		prime = Long.valueOf(l);
+		//System.out.println(prime); // Get Prime numbers of this number of each
+//		root = l / 2;
+		if(prime == 2) {
+			System.out.println(l + " is prime: " + prime);
+		}else
+		System.out.println(l + " is not prime: " + prime);
+			
+		
 		return null;
 	}
 */
@@ -422,7 +492,7 @@ public class EvaluationService {
 	}
 */
 	
-	/**	Question 12
+	/**	Question 12 - Need Finish
 	 * 12. Given a number n, determine what the nth prime is.
 	 * 
 	 * By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see
@@ -437,6 +507,24 @@ public class EvaluationService {
 	/*	Question 12
 	public int calculateNthPrime(int i) {
 		// TODO Write an implementation for this method declaration
+		System.out.println(i);
+		int num = 0;
+		int remainder;
+		int maxCheck = 200000;
+		boolean isPrime = true;
+		String pFound = "";
+		// Match maxCheck with i so that way you have the right output
+		for(int a = 1; a <= maxCheck; a++) {
+			pFound.charAt(a);
+//			pFound.substring(a);
+			System.out.println(pFound);
+			
+		}
+		
+		
+		
+		
+		
 		return 0;
 	}
 */
@@ -596,27 +684,35 @@ public class EvaluationService {
 	 * @param i
 	 * @param set
 	 * @return
-	 */
-	/*	Question 18
+	 * 
 	 * set replaces 3 or 5
 	 * i replaces 20
 	 * find output
+	 */
+//	/*	Question 18
+
 	public int getSumOfMultiples(int i, int[] set) {
 		// TODO Write an implementation for this method declaration
 
-		int mult[] = null;
-		
+		int []mult=null;
+		int count = 0;
 		int sum = 0;
+		int amount = 0;
 		int num = i;
 		for(int r = 0; r < set.length; r++) {
 			int number = set[r];  
 			System.out.println(number);
-			if(i > sum) {
-				sum = number * ((number + 1) / 2);
+//			amount = number;
+			for(int a = 1; a <= (i/number); a++) {
+				amount = number * (a);
+				count = amount;
+				//	put arraylist checker here before sum
+				sum += amount ;
+				
+				
 			}
 			
-			
-			sum += number;			
+						
 		}
 		System.out.println(sum + " yo");
 		int number = set[0];  
@@ -642,7 +738,7 @@ public class EvaluationService {
 		System.out.println("");
 		return 0;
 	}
-*/
+//*/
 	
 	/**	Question 19
 	 * 19. Given a number determine whether or not it is valid per the Luhn formula.
@@ -714,7 +810,7 @@ public class EvaluationService {
 	 * @param string
 	 * @return
 	 */
-//	/*//	Question 20
+//	/*	Question 20
 	public int solveWordProblem(String string) {
 		// TODO Write an implementation for this method declaration
 		return 0;

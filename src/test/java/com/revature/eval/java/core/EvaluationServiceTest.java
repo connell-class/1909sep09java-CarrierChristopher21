@@ -19,6 +19,7 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
+@SuppressWarnings("unused")
 public class EvaluationServiceTest {
 
 	private static final EvaluationService evaluationService = new EvaluationService();
@@ -625,7 +626,7 @@ public class EvaluationServiceTest {
 	/*******************************************************************
 	 * Question 18
 	 ******************************************************************/
-	/*	Question 18
+//	/*	Question 18
 	@Test
 	public void testSumOfMultiplesOf4and6UpToFifteen() {
 
@@ -670,7 +671,7 @@ public class EvaluationServiceTest {
 		assertEquals(4950, output);
 
 	}
-*/
+//*/
 	/*******************************************************************
 	 * Question 19
 	 ******************************************************************/
