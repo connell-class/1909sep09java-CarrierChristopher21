@@ -404,6 +404,7 @@ public class EvaluationServiceTest {
 	public void testProductOfPrimes() {
 		assertEquals(Arrays.asList(5L, 17L, 23L, 461L), evaluationService.calculatePrimeFactorsOf(901255L));
 	}
+	
 */
 	/*******************************************************************
 	 * Question 11
@@ -626,7 +627,7 @@ public class EvaluationServiceTest {
 	/*******************************************************************
 	 * Question 18
 	 ******************************************************************/
-//	/*	Question 18
+	/*	Question 18
 	@Test
 	public void testSumOfMultiplesOf4and6UpToFifteen() {
 
@@ -671,7 +672,7 @@ public class EvaluationServiceTest {
 		assertEquals(4950, output);
 
 	}
-//*/
+*/
 	/*******************************************************************
 	 * Question 19
 	 ******************************************************************/

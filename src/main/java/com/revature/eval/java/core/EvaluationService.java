@@ -1,7 +1,11 @@
 package com.revature.eval.java.core;
 
+import java.time.Duration;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
 import java.time.temporal.Temporal;
-import java.util.List;
+import java.util.*;
 
 
 //@SuppressWarnings("unused")
@@ -24,7 +28,7 @@ public class EvaluationService {
 	}
 */
 	
-	/**	Question 2 - Need Finish
+	/**	Question 2 - PASS
 	 * 2. Convert a phrase to its acronym. Techies love their TLA (Three Letter
 	 * Acronyms)! Help generate some jargon by writing a program that converts a
 	 * long name like Portable Network Graphics to its acronym (PNG).
@@ -32,17 +36,25 @@ public class EvaluationService {
 	 * @param phrase
 	 * @return
 	 */
-	/*	Question 2
+	/*	Question 2 - PASS
 	public String acronym(String phrase) {
 		// TODO Write an implementation for this method declaration
-//		String word;
-//		for(int i = 1; i< phrase.length() -1; i++) {
-//			
-//			System.out.println();
-//			//	i
-//			//	return i;
-//		}
-		return null;
+		boolean testLetter = false;
+		StringBuilder word = new StringBuilder();
+		char w;
+		System.out.println(phrase);
+		for(int i = 0; i< phrase.length(); i++) {
+			w = phrase.charAt(i);
+			if(Character.isLetter(w) && !testLetter) {
+				word.append(w);
+				testLetter = true;
+				System.out.println(word);
+			}else if(!Character.isLetter(w)) {
+				testLetter = false;
+			}
+			
+		}
+		return word.toString().toUpperCase();
 	}
 */
 	
@@ -157,7 +169,7 @@ public class EvaluationService {
 	 * @param string
 	 * @return
 	 */
-	/*	Question 4
+	/*	Question 4 - PASS
 	public int getScrabbleScore(String string) {
 		// TODO Write an implementation for this method declaration
 		string = string.toUpperCase();
@@ -341,7 +353,7 @@ public class EvaluationService {
 	}
 */
 	
-	/**	Question 8
+	/**	Question 8	- Pass
 	 * 8. Implement a program that translates from English to Pig Latin.
 	 * 
 	 * Pig Latin is a made-up children's language that's intended to be confusing.
@@ -358,10 +370,49 @@ public class EvaluationService {
 	 * @param string
 	 * @return
 	 */
-	/*	Question 8
+	/*	Question 8	- Pass
 	public String toPigLatin(String string) {
 		// TODO Write an implementation for this method declaration
-		return null;
+		string.toLowerCase();
+		char vowel[] = {'a', 'e', 'i', 'o', 'u'};
+		StringBuilder lang = new StringBuilder();
+		StringBuilder letter = new StringBuilder();
+		StringBuilder end = new StringBuilder();
+		String word = null;
+		String[] words = {};
+		words = string.split(" ");
+		
+//		System.out.println(string);
+		for(int a = 0; a < words.length; a++) {
+			lang.delete(0,  lang.length());
+			letter.delete(0, letter.length());
+			for(int i = 0; i < words[a].length(); i++) {
+				word = "" + words[a].charAt(i);
+				
+				if(Arrays.toString(vowel).contains(word)) {
+					lang.append(words[a], i, words[a].length());
+					break;
+				}else {
+					letter.append(word);
+					if(words[a].contains("qu")) {
+						letter.append("u");
+						i++;
+					}
+				}	
+			
+			}
+			lang.append(letter.toString() + "ay");
+			
+			end.append(lang.toString());
+			if(words.length > 1 && a != (words.length -1)) {
+				end.append(" ");
+			}
+		}
+
+		
+		
+		System.out.println(end.toString());
+		return end.toString();
 	}
 */
 	
@@ -419,7 +470,7 @@ public class EvaluationService {
 	}
 */
 	
-	/**	Question 10 - Need Finish
+	/**	Question 10 - Pass
 	 * 10. Compute the prime factors of a given natural number.
 	 * 
 	 * A prime number is only evenly divisible by itself and 1.
@@ -429,23 +480,28 @@ public class EvaluationService {
 	 * @param l
 	 * @return
 	 */
-	/*	Question 10
+	/*	Question 10 - Pass
 	public List<Long> calculatePrimeFactorsOf(long l) {
 		// TODO Write an implementation for this method declaration
-		long prime = 0;
-		boolean proof = false;
-		double root = 0;
-//		boolean guess = true;
-		prime = Long.valueOf(l);
-		//System.out.println(prime); // Get Prime numbers of this number of each
-//		root = l / 2;
-		if(prime == 2) {
-			System.out.println(l + " is prime: " + prime);
-		}else
-		System.out.println(l + " is not prime: " + prime);
+		List<Long> pRay = new ArrayList<Long>();
+		long prime = l;
+		for(int a = 2; a <= prime; a++) {
+			if(prime % a == 0) {
+//				System.out.println("Current prime: " + a);
+				pRay.add((long) a);
+				prime = prime / a;
+				a = a- 1;
+				
+			}
+		}
+		
+		
+		
+		
+//		System.out.println(l + " is not prime: " + prime);
 			
 		
-		return null;
+		return pRay;
 	}
 */
 	
@@ -492,7 +548,7 @@ public class EvaluationService {
 	}
 */
 	
-	/**	Question 12 - Need Finish
+	/**	Question 12 - Pass
 	 * 12. Given a number n, determine what the nth prime is.
 	 * 
 	 * By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see
@@ -504,28 +560,39 @@ public class EvaluationService {
 	 * @param i
 	 * @return
 	 */
-	/*	Question 12
+	/*	Question 12 - PASS
 	public int calculateNthPrime(int i) {
 		// TODO Write an implementation for this method declaration
-		System.out.println(i);
+//		System.out.println("The position that I'm looking for is " + i);
 		int num = 0;
-		int remainder;
-		int maxCheck = 200000;
-		boolean isPrime = true;
-		String pFound = "";
+		int a = 0;
+		int r;
+		int remain = 0; // count
+//		int cut = 0;
+//		int maxCheck = 200000;
+//		boolean isPrime = true;
 		// Match maxCheck with i so that way you have the right output
-		for(int a = 1; a <= maxCheck; a++) {
-			pFound.charAt(a);
-//			pFound.substring(a);
-			System.out.println(pFound);
+		 do{
+			if(i == 0) {
+				throw new IllegalArgumentException();
+			}else {
+				num = num + 1;
+				for (r = 2; r <= num; r++) {
+					if(num % r == 0) {
+						break;
+					}
+				}
+				if(r == num) {
+					remain += 1;
+					
+				}
+//				System.out.println(num);
+			}			
 			
-		}
+		}while(remain < i);	
 		
-		
-		
-		
-		
-		return 0;
+		System.out.println("You Pass!");
+		return num;
 	}
 */
 	
@@ -636,27 +703,17 @@ public class EvaluationService {
 			
 			let = "" + letter[i];
 			if(!string.contains(let)) {
-				//	System.out.print(let);
 				
 				return false;
-			}
-			
+			}			
 		}
-		//	System.out.print( "\n");
 		
 		return true;
 	}
-//		while(i <= 25) {
-//			if(i <= 25) {
-//				
-//			}else if()
-//		}
-//	public void getString() {
-//			
-//	}
+
 //*/
 	
-	/**	Question 17
+	/**	Question 17	- PASS
 	 * 17. Calculate the moment when someone has lived for 10^9 seconds.
 	 * 
 	 * A gigasecond is 109 (1,000,000,000) seconds.
@@ -664,15 +721,20 @@ public class EvaluationService {
 	 * @param given
 	 * @return
 	 */
-	/*	Question 17
+	/*	Question 17	- PASS
 	public Temporal getGigasecondDate(Temporal given) {
 		// TODO Write an implementation for this method declaration
-		
-		return null;
+		//	Could be 3 lines 1 if + else
+		LocalDateTime time = LocalDate.from(given).atStartOfDay();
+		int bil = 1000000000;
+		 if(given.isSupported(ChronoUnit.SECONDS))
+			 return given.plus(Duration.ofSeconds(bil));
+		 else
+			 return time.plusSeconds(bil);
 	}
 */
 	
-	/**	Question 18	-	Need Finish
+	/**	Question 18	- Pass
 	 * 18. Given a number, find the sum of all the unique multiples of particular
 	 * numbers up to but not including that number.
 	 * 
@@ -689,56 +751,38 @@ public class EvaluationService {
 	 * i replaces 20
 	 * find output
 	 */
-//	/*	Question 18
+	/*	Question 18 - PASS
 
 	public int getSumOfMultiples(int i, int[] set) {
 		// TODO Write an implementation for this method declaration
 
-		int []mult=null;
-		int count = 0;
+
 		int sum = 0;
 		int amount = 0;
-		int num = i;
+//		int num = i;
+		ArrayList<Integer> count = new ArrayList<Integer>();
+		Set<Integer> set1 = new LinkedHashSet<Integer>();
 		for(int r = 0; r < set.length; r++) {
 			int number = set[r];  
-			System.out.println(number);
-//			amount = number;
-			for(int a = 1; a <= (i/number); a++) {
-				amount = number * (a);
-				count = amount;
-				//	put arraylist checker here before sum
-				sum += amount ;
-				
-				
+			System.out.println("The set number multiples: " + number);
+			while(number < i) {
+				set1.add(number);
+				number += set[r];
 			}
-			
 						
 		}
-		System.out.println(sum + " yo");
-		int number = set[0];  
-
-		
-		
-		System.out.println("hi " + i);
-//		System.out.println("output " + set);
-
-		for (int j=0;j < set.length; j++) {	
-			int [] multiple = new int[i / set[j]];
-			for(int a = 0; a<multiple.length;a++) {
-				multiple[a] = set[j] * (a+1);
-				
-			}
-			
-			
+		for ( int x : set1) {
+			sum += x;
 		}
-	
+		System.out.println("Up to " + i);
+		System.out.println("The sum total is " + sum);
 		
-		System.out.println(sum);
-		System.out.println(i);
-		System.out.println("");
-		return 0;
+		System.out.println(set1 + "\n");
+		
+		
+		return sum;
 	}
-//*/
+*/
 	
 	/**	Question 19
 	 * 19. Given a number determine whether or not it is valid per the Luhn formula.
