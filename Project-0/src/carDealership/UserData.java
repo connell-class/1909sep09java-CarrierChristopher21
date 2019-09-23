@@ -1,5 +1,7 @@
 package carDealership;
 
+import javax.jws.soap.SOAPBinding.Use;
+
 public class UserData {
 	private String idNumber;
 	private String firstName;
@@ -34,8 +36,12 @@ public class UserData {
 	}
 	@Override
 	public String toString() {
-		return "UserData [idNumber = " + idNumber + ", firstName = " + firstName + 
-				", lastName = " + lastName + "]";
+		String UserData = "";
+		UserData = "User Data \n";
+		UserData += "ID Number = " + idNumber + "\n";
+		UserData += "First Name = " + firstName + "\n";
+		UserData += "Last Name = " + lastName + "\n";
+		return UserData;
 	}
 	
 	

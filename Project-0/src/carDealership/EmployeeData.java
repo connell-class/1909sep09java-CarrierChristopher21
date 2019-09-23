@@ -85,10 +85,19 @@ public class EmployeeData {
 	}
 	@Override
 	public String toString() {
-		return "EmployeeData [FirstName = " + FirstName + ", LastName = " + LastName + 
-				", DOB = " + DOB + ", age = " + age + ", email = " + email + 
-				", address = " + address + ", city = " + city + ", zip = " + zip + 
-				", phone = " + phone + "]";
+		String EmployeeData = "";
+		EmployeeData = "Employee Data \n";
+		EmployeeData += "First Name = " + FirstName + "\n";
+		EmployeeData += "Last Name = " + LastName + "\n";
+		EmployeeData += "DOB = " + DOB + "\n";
+		EmployeeData += "Age = " + age + "\n";
+		EmployeeData += "Email = " + email + "\n";
+		EmployeeData += "Address = " + address + "\n";
+		EmployeeData += "City = " + city + "\n";
+		EmployeeData += "Zip = " + zip + "\n";
+		EmployeeData += "Phone = " + phone + "\n";
+		
+		return EmployeeData;
 	}
 	
 	

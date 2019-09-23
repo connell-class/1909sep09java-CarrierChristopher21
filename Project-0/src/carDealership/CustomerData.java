@@ -89,11 +89,18 @@ public class CustomerData {
 		}
 		@Override
 		public String toString() {
-			return "CustomerData [FirstName = " + FirstName + ", LastName = " + LastName + 
-					", DOB = " + DOB + ", age = " + age	+ ", email = " + email + 
-					", address = " + address + ", city = " + city + ", zip = " + zip + 
-					", phone = " + phone
-					+ "]";
+			String CustomerData = "";
+			CustomerData = "Customer Data \n";
+			CustomerData += "First Name = " + FirstName + "\n";
+			CustomerData += "Last Name = " + LastName + "\n";
+			CustomerData += "DOB = " + DOB + "\n";
+			CustomerData += "Age = " + age	+ "\n";
+			CustomerData += "Email = " + email + "\n";
+			CustomerData += "Address = " + address + "\n";
+			CustomerData += "City = " + city + "\n";
+			CustomerData += "Zip = " + zip + "\n";
+			CustomerData += "Phone = " + phone + "\n";
+			return CustomerData; 
 		}
 
 }

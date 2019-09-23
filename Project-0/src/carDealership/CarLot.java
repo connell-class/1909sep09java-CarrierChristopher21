@@ -82,10 +82,17 @@ public class CarLot {
 	@Override
 
 	public String toString() {
-		return "CarLot [brandName = " + brandName + ", model = " + model + ", year = " +
-				year + ", doors = " + doors	+ ", wheels = " + wheels + 
-				", typeOfVehicle = " + typeOfVehicle + ", howManyOnLot = " + 
-				howManyOnLot + "]";
+		String CarLot = "";
+		 CarLot = "Car Lot \n";
+		 CarLot += "Brand Name = " + brandName + "\n";
+		 CarLot += "Model = " + model + "\n";
+		 CarLot += "Year = " + year + "\n";
+		 CarLot += "Doors = " + doors + "\n";
+		 CarLot += "Wheels = " + wheels + "\n";
+		 CarLot += "Type Of Vehicle = " + typeOfVehicle + "\n";
+		 CarLot += "How Many On Lot = " + howManyOnLot + "\n";
+
+		 return CarLot;
 	}
 }
 
