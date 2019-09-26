@@ -200,7 +200,7 @@ public class EvaluationServiceTest {
 	/*******************************************************************
 	 * Question 6
 	 ******************************************************************/
-	/*	Question 6
+//	/*	Question 6
 	@Test
 	public void countOneWord() {
 		Map<String, Integer> expectedWordCount = new HashMap<>();
@@ -255,7 +255,7 @@ public class EvaluationServiceTest {
 		Map<String, Integer> actualWordCount = evaluationService.wordCount("one,\ntwo,\nthree");
 		assertEquals(expectedWordCount, actualWordCount);
 	}
-*/
+//*/
 	/*******************************************************************
 	 * Question 7
 	 ******************************************************************/

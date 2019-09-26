@@ -283,7 +283,7 @@ public class EvaluationService {
 	 * @param string
 	 * @return
 	 */
-	/*	Question 6
+//	/*	Question 6
 	public Map<String, Integer> wordCount(String string) {
 		// TODO Write an implementation for this method declaration
 		
@@ -291,7 +291,7 @@ public class EvaluationService {
 		
 		return null;
 	}
-*/
+//*/
 	
 	/**	Question 7
 	 * 7. Implement a binary search algorithm.
