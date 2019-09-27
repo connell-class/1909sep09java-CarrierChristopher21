@@ -1,8 +1,9 @@
-package carDealership;
+package carEmployee;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class EmployeeData {
+public class EmployeeData implements Serializable{
 	private String FirstName;
 	private String LastName;	
 	private Date DOB;	

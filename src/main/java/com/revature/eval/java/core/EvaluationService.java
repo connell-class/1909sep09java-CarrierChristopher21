@@ -286,14 +286,15 @@ public class EvaluationService {
 //	/*	Question 6
 	public Map<String, Integer> wordCount(String string) {
 		// TODO Write an implementation for this method declaration
-		
+		System.out.println("We have: " + string + "\n");
+//		System.out.println("We Box: " + + "\n");
 		
 		
 		return null;
 	}
 //*/
 	
-	/**	Question 7
+	/**	Question 7	- PASS
 	 * 7. Implement a binary search algorithm.
 	 * 
 	 * Searching a sorted collection is a common task. A dictionary is a sorted list
@@ -328,13 +329,33 @@ public class EvaluationService {
 	 * binary search is a dichotomic divide and conquer search algorithm.
 	 * 
 	 */
-	/*	Question 7
+	/*	Question 7	- PASS
 	static class BinarySearch<T> {
 		private List<T> sortedList;
 
 		public int indexOf(T t) {
 			// TODO Write an implementation for this method declaration
-			return 0;
+			int sizeList = sortedList.size();
+            int low = 0; int high = sizeList - 1;
+            int num = 0;
+            T l;
+            System.out.println("Idex number: " + t);
+            for (int i = 0; i < sizeList; i++) {
+                num = (high + low) / 2;
+                l = sortedList.get(num);
+                if (l.equals(t)) {
+                    break;
+                } else if ((int)l < (int)t) {
+                    low = (int)num + 1;
+                } else if ((int)l > (int)t) {
+                    high = (int)num - 1;
+                }
+                
+            }
+            System.out.println("The sorted list is: " + sortedList);
+            System.out.println("high number: " + high);
+            System.out.println("Final number is: " + num + "\n");
+			return num;
 		}
 
 		public BinarySearch(List<T> sortedList) {

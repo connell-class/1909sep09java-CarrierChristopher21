@@ -1,4 +1,4 @@
-package carDealership;
+package carUser;
 
 import java.io.Serializable;
 
@@ -55,9 +55,9 @@ public class UserData implements Serializable{
 	@Override
 	public String toString() {
 		String UserData = "";
-		UserData = "User Data \n";
-		UserData += "ID Number = " + idNumber + "\n";
-		UserData += "User Account ID = " + userId + "\n";		
+		UserData = "User Data \n";	
+		UserData += "ID Number = " + idNumber + "\n";	
+		UserData += "User Account ID = " + userId + "\n";	
 		UserData += "First Name = " + firstName + "\n";
 		UserData += "Last Name = " + lastName + "\n";
 		return UserData;

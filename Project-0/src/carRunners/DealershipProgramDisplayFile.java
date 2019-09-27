@@ -2,12 +2,12 @@ package carRunners;
 
 import java.util.Scanner;
 
-import carDealership.CustomerRunner;
+import carCustomer.CustomerRunner;
 import carDealership.Dealership;
-import carDealership.EmployeeRunner;
 import carDealership.ErrorRunner;
-import carDealership.SystemRunner;
-import carDealership.UserRunner;
+import carEmployee.EmployeeRunner;
+import carSystem.SystemRunner;
+import carUser.UserRunner;
 
 public class DealershipProgramDisplayFile {
 		//	Dealership

@@ -8,7 +8,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.List;
 
-import carDealership.UserData;
+import carUser.UserData;
 
 public class UserSerializer implements UserDataAccessor{
 	public  Object readObject(String filename) {

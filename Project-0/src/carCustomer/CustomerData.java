@@ -1,18 +1,22 @@
-package carDealership;
+package carCustomer;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class CustomerData {
-		private String FirstName;
-		private String LastName;	
+public class CustomerData implements Serializable{
+
+	private static final long serialVersionUID = 1L;
+		private String FirstName = "n/a";
+		private String LastName = "n/a";	
 		private Date DOB;	
-		private int age;		
-		private String email;
-		private String address;
-		private String city;
-		private String zip;
-		private String phone;
-		
+		private int age = -1;		
+		private String email = "n/a";
+		private String address = "n/a";
+		private String city = "n/a";
+		private String zip = "n/a";
+		private String phone = "n/a";
+		//	phone number regex = "\\(\\d{3}\\)-\\d{3}-\\d{4}"
+		// DOB
 		public String getFirstName() {
 			return FirstName;
 		}

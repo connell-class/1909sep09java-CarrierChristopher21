@@ -11,7 +11,6 @@ public class CarContinue {
         answer = "";
         aPrint.Print("Do you want to continue? Y = Yes, N = No: ");
         
-//        answer = Console.ReadLine();;
         return answer;
     }
 	
