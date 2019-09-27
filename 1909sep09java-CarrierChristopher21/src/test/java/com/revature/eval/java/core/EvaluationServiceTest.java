@@ -19,6 +19,7 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
+@SuppressWarnings("unused")
 public class EvaluationServiceTest {
 
 	private static final EvaluationService evaluationService = new EvaluationService();
@@ -53,7 +54,8 @@ public class EvaluationServiceTest {
 	@Test
 	public void testAPalindrome() {
 		assertEquals("racecar", evaluationService.reverse("racecar"));
-	}*/
+	}
+	*/
 
 	/*******************************************************************
 	 * Question 2
@@ -198,7 +200,7 @@ public class EvaluationServiceTest {
 	/*******************************************************************
 	 * Question 6
 	 ******************************************************************/
-	/*	Question 6
+//	/*	Question 6
 	@Test
 	public void countOneWord() {
 		Map<String, Integer> expectedWordCount = new HashMap<>();
@@ -253,7 +255,7 @@ public class EvaluationServiceTest {
 		Map<String, Integer> actualWordCount = evaluationService.wordCount("one,\ntwo,\nthree");
 		assertEquals(expectedWordCount, actualWordCount);
 	}
-*/
+//*/
 	/*******************************************************************
 	 * Question 7
 	 ******************************************************************/
@@ -402,6 +404,7 @@ public class EvaluationServiceTest {
 	public void testProductOfPrimes() {
 		assertEquals(Arrays.asList(5L, 17L, 23L, 461L), evaluationService.calculatePrimeFactorsOf(901255L));
 	}
+	
 */
 	/*******************************************************************
 	 * Question 11
@@ -624,7 +627,7 @@ public class EvaluationServiceTest {
 	/*******************************************************************
 	 * Question 18
 	 ******************************************************************/
-//	/*	Question 18
+	/*	Question 18
 	@Test
 	public void testSumOfMultiplesOf4and6UpToFifteen() {
 
@@ -669,7 +672,7 @@ public class EvaluationServiceTest {
 		assertEquals(4950, output);
 
 	}
-//*/
+*/
 	/*******************************************************************
 	 * Question 19
 	 ******************************************************************/
