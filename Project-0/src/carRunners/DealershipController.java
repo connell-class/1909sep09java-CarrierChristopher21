@@ -1,10 +1,12 @@
 package carRunners;
 
-import java.util.Scanner;
 
 public class DealershipController {
-	public void Controller(String answer, Scanner sIn) {
-		
+	public DealershipController() {
+
+		System.out.println("We have started! Welcome! \n");
+		DealershipView aDealershipView = new DealershipView();
+		aDealershipView.PrintMenu();
 		
 		
 	}

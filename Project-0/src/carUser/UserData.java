@@ -11,8 +11,8 @@ import java.io.Serializable;
 
 public class UserData implements Serializable{
 	private static final long serialVersionUID = 1L;
-	private String userId;
 	private String idNumber;
+	private String password;	
 	private String firstName;
 	private String lastName;
 	
@@ -22,13 +22,14 @@ public class UserData implements Serializable{
 	public void setIdNumber(String idNumber) {
 		this.idNumber = idNumber;
 	}	
-	public String getUserId() {
-		return userId;
-	}
-	public void setUserId(String userId) {
-		this.userId = userId;
-	}
 
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	
 	public String getFirstName() {
 		return firstName;
 	}
@@ -41,10 +42,10 @@ public class UserData implements Serializable{
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
-	public UserData(String idNumber, String userId, String firstName, String lastName) {
+	public UserData(String idNumber, String password, String firstName, String lastName) {
 		super();
 		this.idNumber = idNumber;
-		this.userId = userId;		
+		this.password = password;		
 		this.firstName = firstName;
 		this.lastName = lastName;
 	}
@@ -57,11 +58,12 @@ public class UserData implements Serializable{
 		String UserData = "";
 		UserData = "User Data \n";	
 		UserData += "ID Number = " + idNumber + "\n";	
-		UserData += "User Account ID = " + userId + "\n";	
+		UserData += "Password = " + password + "\n";	
 		UserData += "First Name = " + firstName + "\n";
 		UserData += "Last Name = " + lastName + "\n";
 		return UserData;
 	}
+
 	
 	
 	

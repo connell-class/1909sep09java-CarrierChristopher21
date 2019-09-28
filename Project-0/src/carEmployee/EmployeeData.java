@@ -1,36 +1,46 @@
 package carEmployee;
 
 import java.io.Serializable;
-import java.util.Date;
 
 public class EmployeeData implements Serializable{
-	private String FirstName;
-	private String LastName;	
-	private Date DOB;	
-	private int age;		
-	private String email;
-	private String address;
-	private String city;
-	private String zip;
-	private String phone;
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private String userName = "n/a";
+	private String password = "n/a";
+	private String FirstName = "n/a";
+	private String LastName = "n/a";	
+	private int age = -1;		
+	private String email = "n/a";
+
+	public String getUserName() {
+		return userName;
+	}
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+	
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	
 	public String getFirstName() {
 		return FirstName;
 	}
 	public void setFirstName(String firstName) {
-		FirstName = firstName;
+		this.FirstName = firstName;
 	}
 	public String getLastName() {
 		return LastName;
 	}
 	public void setLastName(String lastName) {
-		LastName = lastName;
+		this.LastName = lastName;
 	}
-	public Date getDOB() {
-		return DOB;
-	}
-	public void setDOB(Date dOB) {
-		DOB = dOB;
-	}
+	
 	public int getAge() {
 		return age;
 	}
@@ -43,43 +53,18 @@ public class EmployeeData implements Serializable{
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public String getAddress() {
-		return address;
-	}
-	public void setAddress(String address) {
-		this.address = address;
-	}
-	public String getCity() {
-		return city;
-	}
-	public void setCity(String city) {
-		this.city = city;
-	}
-	public String getZip() {
-		return zip;
-	}
-	public void setZip(String zip) {
-		this.zip = zip;
-	}
-	public String getPhone() {
-		return phone;
-	}
-	public void setPhone(String phone) {
-		this.phone = phone;
-	}
-	public EmployeeData(String firstName, String lastName, Date dOB, int age, String email, String address, String city,
-			String zip, String phone) {
+	
+	public EmployeeData(String userName, String password, String firstName, String lastName, 
+			int age, String email) {
 		super();
-		FirstName = firstName;
-		LastName = lastName;
-		DOB = dOB;
+		this.userName = userName;
+		this.password = password;
+		this.FirstName = firstName;
+		this.LastName = lastName;
 		this.age = age;
 		this.email = email;
-		this.address = address;
-		this.city = city;
-		this.zip = zip;
-		this.phone = phone;
 	}
+	
 	public EmployeeData() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -88,18 +73,17 @@ public class EmployeeData implements Serializable{
 	public String toString() {
 		String EmployeeData = "";
 		EmployeeData = "Employee Data \n";
+		EmployeeData += "Username = " + userName + "\n";
+		EmployeeData += "Password = " + password + "\n";
 		EmployeeData += "First Name = " + FirstName + "\n";
 		EmployeeData += "Last Name = " + LastName + "\n";
-		EmployeeData += "DOB = " + DOB + "\n";
 		EmployeeData += "Age = " + age + "\n";
 		EmployeeData += "Email = " + email + "\n";
-		EmployeeData += "Address = " + address + "\n";
-		EmployeeData += "City = " + city + "\n";
-		EmployeeData += "Zip = " + zip + "\n";
-		EmployeeData += "Phone = " + phone + "\n";
-		
 		return EmployeeData;
 	}
+
+
+
 	
 	
 }
