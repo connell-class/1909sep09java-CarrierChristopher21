@@ -10,36 +10,44 @@ public class CarContinue {
     {
         answer = "";
         aPrint.Print("Do you want to continue? Y = Yes, N = No: ");
-        
+        answer = sIn.nextLine();
         return answer;
     }
 	
 //  While False                     -       6th Part
-    public String WhileFalse(String answer)
+    public String WhileFalse(String answer,Scanner sIn)
     {
-        while(answer != "y" || answer != "Y" || answer != "n" || answer != "N" || answer != "")
+        while(!answer.contains("y") || !answer.contains("Y") || !answer.contains("n") || !answer.contains("N") || 
+        		!answer.contains(""))
         {
-            if(answer == "Y" || answer == "y" || answer == "n" || answer == "N" || answer == "")
+            if(answer.equals("y") || answer.equals("Y") || answer.equals("n") || answer.equals("N") 
+            		|| answer.equals(""))
             {
                 break;
             }
             else
             {
-                answer = WhileFalseEnd(answer);
+                answer = WhileFalseEnd(answer, sIn);
             }
         }
         return answer;
     }
 	
     //  While False End                 -       7th Part
-    public String WhileFalseEnd(String answer)
+    public String WhileFalseEnd(String answer, Scanner sIn)
     {
         //answer = "";
-        aPrint.PrintExist("Your response is not valid answer!!");
+//        aPrint.PrintExist("Your response is not valid answer!!");
         aPrint.Print("Do you want to continue? Y = Yes, N = No: ");
-//        answer = Console.ReadLine();
+        answer = sIn.nextLine();
         return answer;
     }
 
 
 }
+
+
+
+
+
+

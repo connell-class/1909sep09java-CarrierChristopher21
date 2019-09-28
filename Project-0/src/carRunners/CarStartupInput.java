@@ -1,7 +1,6 @@
 package carRunners;
 
 import java.util.Scanner;
-
 import carPrinter.CarPrinter;
 
 public class CarStartupInput {
@@ -10,11 +9,15 @@ public class CarStartupInput {
 	
     public String GetStartUpInput(String answer, Scanner sIn)
     {
+    	
         answer = "";
-        aPrint.Print("Students = 1, Category = 2, Customers = 3, Employee = 4, Order Details = 5: \n" +
-            "Order = 6, Product = 7, Shipper = 8, Supplier = 9: ");
-        aPrint.PrintList("Press a number 1 - 9: ");
-        answer = sIn.next();    //  Collecting input from Console
+		System.out.println("\nWelcome to the wonderful World of Cars Online Car Dealership. " + 
+				"\nHow may I help you today? \n");
+		System.out.println("Please pick which function you want to do today? ");
+        aPrint.Print("Sign up = 1 \nReturning Customer = 2 \nEmployee Sign in = 3 \nEmployee = 4 ");
+        aPrint.PrintList("Press a number 1 - 5: ");
+        answer = sIn.nextLine();    //  Collecting input from Console
+        
         return answer;
     }
 }

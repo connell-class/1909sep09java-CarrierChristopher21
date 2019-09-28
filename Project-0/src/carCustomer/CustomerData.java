@@ -1,14 +1,14 @@
 package carCustomer;
 
 import java.io.Serializable;
-import java.util.Date;
 
 public class CustomerData implements Serializable{
 
 	private static final long serialVersionUID = 1L;
+		private String userName = "n/a";
+		private String password = "n/a";
 		private String FirstName = "n/a";
-		private String LastName = "n/a";	
-		private Date DOB;	
+		private String LastName = "n/a";
 		private int age = -1;		
 		private String email = "n/a";
 		private String address = "n/a";
@@ -16,24 +16,31 @@ public class CustomerData implements Serializable{
 		private String zip = "n/a";
 		private String phone = "n/a";
 		//	phone number regex = "\\(\\d{3}\\)-\\d{3}-\\d{4}"
-		// DOB
+		
+		public String getUserName() {
+			return userName;
+		}
+		public void setUserName(String userName) {
+			this.userName = userName;
+		}
+		public String getPassword() {
+			return password;
+		}
+		public void setPassword(String password) {
+			this.password = password;
+		}
+		
 		public String getFirstName() {
 			return FirstName;
 		}
 		public void setFirstName(String firstName) {
-			FirstName = firstName;
+			this.FirstName = firstName;
 		}
 		public String getLastName() {
 			return LastName;
 		}
 		public void setLastName(String lastName) {
-			LastName = lastName;
-		}
-		public Date getDOB() {
-			return DOB;
-		}
-		public void setDOB(Date dOB) {
-			DOB = dOB;
+			this.LastName = lastName;
 		}
 		public int getAge() {
 			return age;
@@ -72,13 +79,14 @@ public class CustomerData implements Serializable{
 			this.phone = phone;
 		}
 		
-		
-		public CustomerData(String firstName, String lastName, Date dOB, int age, String email, String address, String city,
-				String zip, String phone) {
+			
+		public CustomerData(String userName, String password, String firstName, String lastName, 
+				int age, String email, String address, String city, String zip,	String phone) {
 			super();
-			FirstName = firstName;
-			LastName = lastName;
-			DOB = dOB;
+			this.userName = userName;
+			this.password = password;
+			this.FirstName = firstName;
+			this.LastName = lastName;
 			this.age = age;
 			this.email = email;
 			this.address = address;
@@ -86,24 +94,26 @@ public class CustomerData implements Serializable{
 			this.zip = zip;
 			this.phone = phone;
 		}
-		
 		public CustomerData() {
 			super();
 			// TODO Auto-generated constructor stub
 		}
 		@Override
 		public String toString() {
+			
 			String CustomerData = "";
 			CustomerData = "Customer Data \n";
+			CustomerData += "UserName = " + userName + "\n";
+			CustomerData += "Password = " + password + "\n";
 			CustomerData += "First Name = " + FirstName + "\n";
 			CustomerData += "Last Name = " + LastName + "\n";
-			CustomerData += "DOB = " + DOB + "\n";
 			CustomerData += "Age = " + age	+ "\n";
 			CustomerData += "Email = " + email + "\n";
 			CustomerData += "Address = " + address + "\n";
 			CustomerData += "City = " + city + "\n";
 			CustomerData += "Zip = " + zip + "\n";
 			CustomerData += "Phone = " + phone + "\n";
+			
 			return CustomerData; 
 		}
 
