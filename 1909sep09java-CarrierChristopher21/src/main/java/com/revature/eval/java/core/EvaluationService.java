@@ -18,7 +18,7 @@ public class EvaluationService {
 	 * @param string
 	 * @return
 	 */
-	/*	Question 1 - Pass
+//	/*	Question 1 - Pass
 	public String reverse(String string) {
 		char[] reversed = new char[string.length()];
 		for (int i = reversed.length - 1, j=0; i >= 0; i--, j++) {
@@ -26,7 +26,7 @@ public class EvaluationService {
 		}
 		return new String(reversed);
 	}
-*/
+//*/
 	
 	/**	Question 2 - PASS
 	 * 2. Convert a phrase to its acronym. Techies love their TLA (Three Letter
@@ -36,7 +36,7 @@ public class EvaluationService {
 	 * @param phrase
 	 * @return
 	 */
-	/*	Question 2 - PASS
+//	/*	Question 2 - PASS
 	public String acronym(String phrase) {
 		// TODO Write an implementation for this method declaration
 		boolean testLetter = false;
@@ -56,7 +56,7 @@ public class EvaluationService {
 		}
 		return word.toString().toUpperCase();
 	}
-*/
+//*/
 	
 	/**	Question 3	- PASS
 	 * 3. Determine if a triangle is equilateral, isosceles, or scalene. An
@@ -67,7 +67,7 @@ public class EvaluationService {
 	 * different lengths.
 	 *
 	 */
-	/*	Question 3 - Pass
+//	/*	Question 3 - Pass
 	static class Triangle {
 		private double sideOne;
 		private double sideTwo;
@@ -152,7 +152,7 @@ public class EvaluationService {
 		}
 
 	}
-*/
+//*/
 	
 	/**	Question 4	- Pass
 	 * 4. Given a word, compute the scrabble score for that word.
@@ -169,7 +169,7 @@ public class EvaluationService {
 	 * @param string
 	 * @return
 	 */
-	/*	Question 4 - PASS
+//	/*	Question 4 - PASS
 	public int getScrabbleScore(String string) {
 		// TODO Write an implementation for this method declaration
 		string = string.toUpperCase();
@@ -234,7 +234,7 @@ public class EvaluationService {
 		return score;
 	}
 
-*/
+//*/
 	
 	/**	Question 5	- PASS
 	 * 5. Clean up user-entered phone numbers so that they can be sent SMS messages.
@@ -267,7 +267,7 @@ public class EvaluationService {
 	 * Note: As this exercise only deals with telephone numbers used in
 	 * NANP-countries, only 1 is considered a valid country code.
 	 */
-	/*	Question 5	- PASS
+//	/*	Question 5	- PASS
 	public String cleanPhoneNumber(String string) {
 		// TODO Write an implementation for this method declaration
 		
@@ -285,7 +285,7 @@ public class EvaluationService {
 			return string;
 		}
 	}
-*/
+//*/
 	
 	/**	Question 6	- PASS 3 / 5 
 	 * 6. Given a phrase, count the occurrences of each word in that phrase.
@@ -296,7 +296,7 @@ public class EvaluationService {
 	 * @param string
 	 * @return
 	 */
-	/*	Question 6	- PASS 3 / 5
+//	/*	Question 6	- PASS 3 / 5
 	public Map<String, Integer> wordCount(String string) {
 		// TODO Write an implementation for this method declaration
 //		System.out.println("We have: " + string + "\n");
@@ -314,7 +314,7 @@ public class EvaluationService {
 		}
 		return wordCount1;
 	}
-*/
+//*/
 	
 	/**	Question 7	- PASS
 	 * 7. Implement a binary search algorithm.
@@ -351,7 +351,7 @@ public class EvaluationService {
 	 * binary search is a dichotomic divide and conquer search algorithm.
 	 * 
 	 */
-	/*	Question 7	- PASS
+//	/*	Question 7	- PASS
 	static class BinarySearch<T> {
 		private List<T> sortedList;
 
@@ -394,7 +394,7 @@ public class EvaluationService {
 		}
 
 	}
-*/
+//*/
 	
 	/**	Question 8	- Pass
 	 * 8. Implement a program that translates from English to Pig Latin.
@@ -413,7 +413,7 @@ public class EvaluationService {
 	 * @param string
 	 * @return
 	 */
-	/*	Question 8	- Pass
+//	/*	Question 8	- Pass
 	public String toPigLatin(String string) {
 		// TODO Write an implementation for this method declaration
 		string.toLowerCase();
@@ -457,7 +457,7 @@ public class EvaluationService {
 		System.out.println(end.toString());
 		return end.toString();
 	}
-*/
+//*/
 	
 	/**	Question 9 - Pass
 	 * 9. An Armstrong number is a number that is the sum of its own digits each
@@ -474,7 +474,7 @@ public class EvaluationService {
 	 * @param input
 	 * @return
 	 */
-	/*	Question 9 - Pass
+//	/*	Question 9 - Pass
 //	Inspired from: https://www.javatpoint.com/armstrong-number-in-java
 //	https://www.programiz.com/java-programming/examples/armstrong-number
 	public boolean isArmstrongNumber(int input) {
@@ -511,7 +511,7 @@ public class EvaluationService {
 			return false;
 		}
 	}
-*/
+//*/
 	
 	/**	Question 10 - Pass
 	 * 10. Compute the prime factors of a given natural number.
@@ -523,7 +523,7 @@ public class EvaluationService {
 	 * @param l
 	 * @return
 	 */
-	/*	Question 10 - Pass
+//	/*	Question 10 - Pass
 	public List<Long> calculatePrimeFactorsOf(long l) {
 		// TODO Write an implementation for this method declaration
 		List<Long> pRay = new ArrayList<Long>();
@@ -542,7 +542,7 @@ public class EvaluationService {
 		
 		return pRay;
 	}
-*/
+//*/
 	
 	/**	Question 11
 	 * 11. Create an implementation of the rotational cipher, also sometimes called
@@ -599,12 +599,12 @@ public class EvaluationService {
 	 * @param i
 	 * @return
 	 */
-	/*	Question 12 - PASS
+//	/*	Question 12 - PASS
 	public int calculateNthPrime(int i) {
 		// TODO Write an implementation for this method declaration
 //		System.out.println("The position that I'm looking for is " + i);
 		int num = 0;
-		int a = 0;
+//		int a = 0;
 		int r;
 		int remain = 0; // count
 //		int cut = 0;
@@ -633,7 +633,7 @@ public class EvaluationService {
 		System.out.println("You Pass!");
 		return num;
 	}
-*/
+//*/
 	
 	/**	Questions 13 & 14
 	 * 13 & 14. Create an implementation of the atbash cipher, an ancient encryption
@@ -659,8 +659,8 @@ public class EvaluationService {
 	 * rxpyi ldmul cqfnk hlevi gsvoz abwlt gives thequickbrownfoxjumpsoverthelazydog
 	 *
 	 */
-	//	Question 13 & 14
-	/*
+//	/*	Question 13 & 14
+	
 	static class AtbashCipher {
 
 		/**	Question 13
@@ -669,25 +669,26 @@ public class EvaluationService {
 		 * @param string
 		 * @return
 		 */
-	/*	Question 13
+//	/*	Question 13
 		public static String encode(String string) {
 			// TODO Write an implementation for this method declaration
 			return null;
 		}
-*/
+//*/
 		/**	Question 14
 		 * Question 14
 		 * 
 		 * @param string
 		 * @return
 		 */
-		/*	Question 14
+//		/*	Question 14
 		public static String decode(String string) {
 			// TODO Write an implementation for this method declaration
 			return null;
 		}
 		
-	}*/
+	}
+//	*/
 
 	/**	Question 15	- Pass
 	 * 15. The ISBN-10 verification process is used to validate book identification
@@ -711,7 +712,7 @@ public class EvaluationService {
 	 * @param string
 	 * @return
 	 */
-	/*	Question 15	- Pass
+//	/*	Question 15	- Pass
 	public boolean isValidIsbn(String string) {
 		//	Inspired from https://www.geeksforgeeks.org/program-check-isbn/
 		// TODO Write an implementation for this method declaration
@@ -755,8 +756,7 @@ public class EvaluationService {
 
 
 	}
-	*/
-//*/
+//	*/
 	
 	/**	Question 16 - PASS
 	 * 16. Determine if a sentence is a pangram. A pangram (Greek: παν γράμμα, pan
@@ -771,7 +771,7 @@ public class EvaluationService {
 	 * @param string
 	 * @return
 	 */
-	/*	Question 16 - PASS
+//	/*	Question 16 - PASS
 	public boolean isPangram(String string) {
 		// TODO Write an implementation for this method declaration
 		char letter[] = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j',
@@ -800,7 +800,7 @@ public class EvaluationService {
 	 * @param given
 	 * @return
 	 */
-	/*	Question 17	- PASS
+//	/*	Question 17	- PASS
 	public Temporal getGigasecondDate(Temporal given) {
 		// TODO Write an implementation for this method declaration
 		//	Could be 3 lines 1 if + else
@@ -811,7 +811,7 @@ public class EvaluationService {
 		 else
 			 return time.plusSeconds(bil);
 	}
-*/
+//*/
 	
 	/**	Question 18	- Pass
 	 * 18. Given a number, find the sum of all the unique multiples of particular
@@ -830,16 +830,16 @@ public class EvaluationService {
 	 * i replaces 20
 	 * find output
 	 */
-	/*	Question 18 - PASS
+//	/*	Question 18 - PASS
 
 	public int getSumOfMultiples(int i, int[] set) {
 		// TODO Write an implementation for this method declaration
 
 
 		int sum = 0;
-		int amount = 0;
+//		int amount = 0;
 //		int num = i;
-		ArrayList<Integer> count = new ArrayList<Integer>();
+//		ArrayList<Integer> count = new ArrayList<Integer>();
 		Set<Integer> set1 = new LinkedHashSet<Integer>();
 		for(int r = 0; r < set.length; r++) {
 			int number = set[r];  
@@ -861,7 +861,7 @@ public class EvaluationService {
 		
 		return sum;
 	}
-*/
+//*/
 	
 	/**	Question 19
 	 * 19. Given a number determine whether or not it is valid per the Luhn formula.
@@ -899,12 +899,12 @@ public class EvaluationService {
 	 * @param string
 	 * @return
 	 */
-	/*	Question 19
+//	/*	Question 19
 	public boolean isLuhnValid(String string) {
 		// TODO Write an implementation for this method declaration
 		return false;
 	}
-*/
+//*/
 	
 	/**	Question 20	- PASS
 	 * 20. Parse and evaluate simple math word problems returning the answer as an

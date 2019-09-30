@@ -30,7 +30,7 @@ public class EvaluationServiceTest {
 	/*******************************************************************
 	 * Question 1
 	 ******************************************************************/
-	/*	Question 1 - Pass
+//	/*	Question 1 - Pass
 	@Test
 	public void testAnEmptyString() {
 		assertEquals("", evaluationService.reverse(""));
@@ -55,12 +55,12 @@ public class EvaluationServiceTest {
 	public void testAPalindrome() {
 		assertEquals("racecar", evaluationService.reverse("racecar"));
 	}
-	*/
+//	*/
 
 	/*******************************************************************
 	 * Question 2
 	 ******************************************************************/
-	/*	Question 2
+//	/*	Question 2
 	@Test
 	public void basic() {
 		final String phrase = "Portable Network Graphics";
@@ -88,11 +88,11 @@ public class EvaluationServiceTest {
 		final String expected = "CMOS";
 		assertEquals(expected, evaluationService.acronym(phrase));
 	}
-*/
+//*/
 	/*******************************************************************
 	 * Question 3
 	 ******************************************************************/
-	/*	Question 3 - Pass
+//	/*	Question 3 - Pass
 	@Test
 	public void trianglesWithNoEqualSidesAreNotEquilateral() {
 		EvaluationService.Triangle triangle = new EvaluationService.Triangle(5, 4, 6);
@@ -128,11 +128,11 @@ public class EvaluationServiceTest {
 		EvaluationService.Triangle triangle = new EvaluationService.Triangle(0.5, 0.4, 0.6);
 		assertTrue(triangle.isScalene());
 	}
-*/
+//*/
 	/*******************************************************************
 	 * Question 4
 	 ******************************************************************/
-	/*	Question 4
+//	/*	Question 4
 	@Test
 	public void testAValuableLetter() {
 		assertEquals(4, evaluationService.getScrabbleScore("f"));
@@ -157,11 +157,11 @@ public class EvaluationServiceTest {
 	public void testALongMixCaseWord() {
 		assertEquals(41, evaluationService.getScrabbleScore("OxyphenButazone"));
 	}
- */
+// */
 	/*******************************************************************
 	 * Question 5
 	 ******************************************************************/
-	/*	Question 5
+//	/*	Question 5
 	@Test
 	public void cleansTheNumber() {
 		final String expectedNumber = "2234567890";
@@ -196,11 +196,11 @@ public class EvaluationServiceTest {
 		expectedException.expect(IllegalArgumentException.class);
 		evaluationService.cleanPhoneNumber("123-@:!-7890");
 	}
-*/
+//*/
 	/*******************************************************************
 	 * Question 6
 	 ******************************************************************/
-	/*	Question 6
+//	/*	Question 6
 	@Test
 	public void countOneWord() {
 		Map<String, Integer> expectedWordCount = new HashMap<>();
@@ -255,11 +255,11 @@ public class EvaluationServiceTest {
 		Map<String, Integer> actualWordCount = evaluationService.wordCount("one,\ntwo,\nthree");
 		assertEquals(expectedWordCount, actualWordCount);
 	}
-*/
+//*/
 	/*******************************************************************
 	 * Question 7
 	 ******************************************************************/
-	/*	Question 7
+//	/*	Question 7
 	@Test
 	public void findsAValueInTheMiddleOfAnArray() {
 		List<String> sortedList = Collections.unmodifiableList(Arrays.asList("1", "3", "4", "6", "8", "9", "11"));
@@ -306,11 +306,11 @@ public class EvaluationServiceTest {
 
 		assertEquals(5, search.indexOf(21));
 	}
-*/
+//*/
 	/*******************************************************************
 	 * Question 8
 	 ******************************************************************/
-	/*	Question 8
+//	/*	Question 8
 	@Test
 	public void testWordBeginningWithA() {
 		assertEquals("appleay", evaluationService.toPigLatin("apple"));
@@ -335,11 +335,11 @@ public class EvaluationServiceTest {
 	public void testAWholePhrase() {
 		assertEquals("ickquay astfay unray", evaluationService.toPigLatin("quick fast run"));
 	}
-*/
+//*/
 	/*******************************************************************
 	 * Question 9
 	 ******************************************************************/
-	 /*	Question 9 - Pass
+//	 /*	Question 9 - Pass
 	@Test	
 	public void singleDigitsAreArmstrongNumbers() {
 		int input = 5;
@@ -374,12 +374,12 @@ public class EvaluationServiceTest {
 
 		assertTrue(evaluationService.isArmstrongNumber(input));
 	}
-*/
+//*/
 	
 	/*******************************************************************
 	 * Question 10
 	 ******************************************************************/
-	/*	Question 10
+//	/*	Question 10
 	@Test
 	public void testPrimeNumber() {
 		assertEquals(Collections.singletonList(2L), evaluationService.calculatePrimeFactorsOf(2L));
@@ -405,7 +405,7 @@ public class EvaluationServiceTest {
 		assertEquals(Arrays.asList(5L, 17L, 23L, 461L), evaluationService.calculatePrimeFactorsOf(901255L));
 	}
 	
-*/
+//*/
 	/*******************************************************************
 	 * Question 11
 	 ******************************************************************/
@@ -444,7 +444,7 @@ public class EvaluationServiceTest {
 	/*******************************************************************
 	 * Question 12
 	 ******************************************************************/
-	/*	Question 12
+//	/*	Question 12
 	@Test
 	public void testFirstPrime() {
 		assertThat(evaluationService.calculateNthPrime(1), is(2));
@@ -470,11 +470,11 @@ public class EvaluationServiceTest {
 		expectedException.expect(IllegalArgumentException.class);
 		evaluationService.calculateNthPrime(0);
 	}
-*/
+//*/
 	/*******************************************************************
 	 * Question 13
 	 ******************************************************************/
-	/*	Question 13
+//	/*	Question 13
 	@Test
 	public void testEncodeYes() {
 		assertEquals("bvh", EvaluationService.AtbashCipher.encode("yes"));
@@ -505,11 +505,11 @@ public class EvaluationServiceTest {
 		assertEquals("gsvjf rxpyi ldmul cqfnk hlevi gsvoz abwlt",
 				EvaluationService.AtbashCipher.encode("The quick brown fox jumps over the lazy dog."));
 	}
-*/
+//*/
 	/*******************************************************************
 	 * Question 14
 	 ******************************************************************/
-	/*	Question 14
+//	/*	Question 14
 	@Test
 	public void testDecodeExercism() {
 		assertEquals("exercism", EvaluationService.AtbashCipher.decode("vcvix rhn"));
@@ -531,11 +531,11 @@ public class EvaluationServiceTest {
 		assertEquals("thequickbrownfoxjumpsoverthelazydog",
 				EvaluationService.AtbashCipher.decode("gsvjf rxpyi ldmul cqfnk hlevi gsvoz abwlt"));
 	}
-*/
+//*/
 	/*******************************************************************
 	 * Question 15
 	 ******************************************************************/
-	/*	Question 15
+//	/*	Question 15
 	@Test
 	public void validIsbnNumber() {
 		assertTrue(evaluationService.isValidIsbn("3-598-21508-8"));
@@ -560,11 +560,11 @@ public class EvaluationServiceTest {
 	public void invalidCharacterInIsbn() {
 		assertFalse(evaluationService.isValidIsbn("3-598-2K507-0"));
 	}
-*/
+//*/
 	/*******************************************************************
 	 * Question 16
 	 ******************************************************************/
-	/*	Question 16 - Pass
+//	/*	Question 16 - Pass
 	@Test
 	public void emptySentenceIsNotPangram() {
 		assertFalse(evaluationService.isPangram(""));
@@ -589,11 +589,11 @@ public class EvaluationServiceTest {
 	public void phraseMissingAnotherCharacterIsNotPangram() {
 		assertFalse(evaluationService.isPangram("five boxing wizards jump quickly at it"));
 	}
-*/
+//*/
 	/*******************************************************************
 	 * Question 17
 	 ******************************************************************/
-	/*	Question 17
+//	/*	Question 17
 	@Test
 	public void modernTime() {
 		assertEquals(LocalDateTime.of(2043, Month.JANUARY, 1, 1, 46, 40),
@@ -623,11 +623,11 @@ public class EvaluationServiceTest {
 		assertEquals(LocalDateTime.of(2046, Month.OCTOBER, 3, 1, 46, 39),
 				evaluationService.getGigasecondDate(LocalDateTime.of(2015, Month.JANUARY, 24, 23, 59, 59)));
 	}
-*/
+//*/
 	/*******************************************************************
 	 * Question 18
 	 ******************************************************************/
-	/*	Question 18
+//	/*	Question 18
 	@Test
 	public void testSumOfMultiplesOf4and6UpToFifteen() {
 
@@ -672,11 +672,11 @@ public class EvaluationServiceTest {
 		assertEquals(4950, output);
 
 	}
-*/
+//*/
 	/*******************************************************************
 	 * Question 19
 	 ******************************************************************/
-	/*	Question 19
+//	/*	Question 19
 	@Test
 	public void testThatAValidCanadianSocialInsuranceNumberIsIdentifiedAsValidV1() {
 		assertTrue(evaluationService.isLuhnValid("046 454 286"));
@@ -701,11 +701,11 @@ public class EvaluationServiceTest {
 	public void testThatStringContainingPunctuationIsInvalid() {
 		assertFalse(evaluationService.isLuhnValid("055-444-285"));
 	}
-*/
+//*/
 	/*******************************************************************
 	 * Question 20
 	 ******************************************************************/
-	/*	Question 20
+//	/*	Question 20
 	
 	@Test
 	public void testSingleAddition1() {
@@ -731,5 +731,5 @@ public class EvaluationServiceTest {
 	public void testSingleDivision() {
 		assertEquals(-11, evaluationService.solveWordProblem("What is 33 divided by -3?"));
 	}
-*/
+//*/
 }
