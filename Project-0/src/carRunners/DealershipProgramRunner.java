@@ -37,7 +37,8 @@ public class DealershipProgramRunner {
                 answer = aStartupInput.GetStartUpInput(answer, sIn);     //  Collecting input from Console
             }   
             else if(answer.equals("n") || answer.equals("N") || answer.equals("")) //  End of program if any of these are answered
-            {                                                       //  During the Continuation Question
+            {                               //  During the Continuation Question
+            	System.out.println("Have a Great Day! \n");
                 break;
             }
         }   //  End of While statement

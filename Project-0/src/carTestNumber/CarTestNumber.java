@@ -33,7 +33,7 @@ public class CarTestNumber {
             System.out.print("We are all numbers ");
             System.out.println(number);
             if(anId == 5) {
-				aUserData.setIdNumber(answer);
+//				aUserData.setIdNumber(answer);
 				
 			}else {
 				

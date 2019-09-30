@@ -14,8 +14,9 @@ public class CarStartupInput {
 		System.out.println("\nWelcome to the wonderful World of Cars Online Car Dealership. " + 
 				"\nHow may I help you today? \n");
 		System.out.println("Please pick which function you want to do today? ");
-        aPrint.Print("Sign up = 1 \nReturning Customer = 2 \nEmployee Sign in = 3 \nEmployee = 4 ");
-        aPrint.PrintList("Press a number 1 - 5: ");
+        aPrint.Print("Car Login = 1 \nCar Display = 2 \nEmployee Sign in = 3 "
+        		+ "\nCurrent Customer = 4 ");
+        aPrint.PrintList("Press a number 1 - 4: ");
         answer = sIn.nextLine();    //  Collecting input from Console
         
         return answer;

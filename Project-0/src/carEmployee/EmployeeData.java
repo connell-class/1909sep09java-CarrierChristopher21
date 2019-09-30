@@ -54,6 +54,10 @@ public class EmployeeData implements Serializable{
 		this.email = email;
 	}
 	
+	public boolean passwordTest() {
+		return false;
+	}
+	
 	public EmployeeData(String userName, String password, String firstName, String lastName, 
 			int age, String email) {
 		super();
@@ -65,10 +69,17 @@ public class EmployeeData implements Serializable{
 		this.email = email;
 	}
 	
+	public EmployeeData(String userName, String password) {
+		super();
+		this.userName = userName;
+		this.password = password;
+	}
+	
 	public EmployeeData() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+	
 	@Override
 	public String toString() {
 		String EmployeeData = "";

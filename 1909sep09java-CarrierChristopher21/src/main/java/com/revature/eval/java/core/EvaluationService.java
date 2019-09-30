@@ -236,7 +236,7 @@ public class EvaluationService {
 
 */
 	
-	/**	Question 5
+	/**	Question 5	- PASS
 	 * 5. Clean up user-entered phone numbers so that they can be sent SMS messages.
 	 * 
 	 * The North American Numbering Plan (NANP) is a telephone numbering system used
@@ -267,14 +267,27 @@ public class EvaluationService {
 	 * Note: As this exercise only deals with telephone numbers used in
 	 * NANP-countries, only 1 is considered a valid country code.
 	 */
-	/*	Question 5
+	/*	Question 5	- PASS
 	public String cleanPhoneNumber(String string) {
 		// TODO Write an implementation for this method declaration
-		return null;
+		
+		String string1 = "";
+
+		for (int i = 0; i < string.length(); i++) {
+			if (Character.isDigit(string.charAt(i))) {
+				string1 += string.charAt(i);
+			}
+		}
+		if (string1.length() != 10||"abc@:!-".contains(string)) {
+			throw new IllegalArgumentException();
+
+		} else {
+			return string;
+		}
 	}
 */
 	
-	/**	Question 6
+	/**	Question 6	- PASS 3 / 5 
 	 * 6. Given a phrase, count the occurrences of each word in that phrase.
 	 * 
 	 * For example for the input "olly olly in come free" olly: 2 in: 1 come: 1
@@ -283,16 +296,25 @@ public class EvaluationService {
 	 * @param string
 	 * @return
 	 */
-//	/*	Question 6
+	/*	Question 6	- PASS 3 / 5
 	public Map<String, Integer> wordCount(String string) {
 		// TODO Write an implementation for this method declaration
-		System.out.println("We have: " + string + "\n");
-//		System.out.println("We Box: " + + "\n");
+//		System.out.println("We have: " + string + "\n");
+		String[] splitString = string.split(" ");
 		
-		
-		return null;
+		Map<String, Integer> wordCount1 = new HashMap<>();
+
+		for (int i = 0; i < splitString.length; i++) {
+
+			if (wordCount1.containsKey(splitString[i])) {
+				wordCount1.put(splitString[i], wordCount1.get(splitString[i]) + 1);
+			} else {
+				wordCount1.put(splitString[i], 1);
+			}
+		}
+		return wordCount1;
 	}
-//*/
+*/
 	
 	/**	Question 7	- PASS
 	 * 7. Implement a binary search algorithm.
@@ -514,11 +536,7 @@ public class EvaluationService {
 				a = a- 1;
 				
 			}
-		}
-		
-		
-		
-		
+		}		
 //		System.out.println(l + " is not prime: " + prime);
 			
 		
@@ -552,7 +570,7 @@ public class EvaluationService {
 	 * gur ynml qbt. ROT13 Gur dhvpx oebja sbk whzcf bire gur ynml qbt. gives The
 	 * quick brown fox jumps over the lazy dog.
 	 */
-	/*	Question 11
+//	/*	Question 11
 	static class RotationalCipher {
 		private int key;
 
@@ -567,7 +585,7 @@ public class EvaluationService {
 		}
 
 	}
-*/
+//*/
 	
 	/**	Question 12 - Pass
 	 * 12. Given a number n, determine what the nth prime is.
@@ -671,7 +689,7 @@ public class EvaluationService {
 		
 	}*/
 
-	/**	Question 15
+	/**	Question 15	- Pass
 	 * 15. The ISBN-10 verification process is used to validate book identification
 	 * numbers. These normally contain dashes and look like: 3-598-21508-8
 	 * 
@@ -693,12 +711,52 @@ public class EvaluationService {
 	 * @param string
 	 * @return
 	 */
-	/*	Question 15
+	/*	Question 15	- Pass
 	public boolean isValidIsbn(String string) {
+		//	Inspired from https://www.geeksforgeeks.org/program-check-isbn/
 		// TODO Write an implementation for this method declaration
-		return false;
+		System.out.println(string);
+		string = string.replace("-", "");		
+		int total = 0;
+		int count = 0;
+		int num = string.length();
+		
+		ArrayList<Integer> test = new ArrayList<Integer>(); 
+		
+		if(num != 10) {
+			System.out.println(string + " Fail \n");
+			return false;
+		}			
+		for(int i = 0; i < string.length(); i++, num--) {
+			if (string.charAt(string.length() - 1) == 'X') {
+				string.replace(string.charAt(string.length() - 1), (char) 10);
+			} else if (Character.isLetter(string.charAt(i))){ 
+			
+				continue; 
+			} else {	
+				count = string.charAt(i) * num;
+				test.add(count);
+				
+			}
+			
+		}
+		
+		for (int go = 0; go < test.size(); go++) {
+			total += test.get(go);
+		}
+
+		if (total % 11 == 0) {
+			System.out.println(string + " Pass " + "\n");
+			return true;
+		}else {
+			System.out.println(string + " Fail " + "\n");
+		}
+		return  false;
+
+
 	}
-*/
+	*/
+//*/
 	
 	/**	Question 16 - PASS
 	 * 16. Determine if a sentence is a pangram. A pangram (Greek: παν γράμμα, pan
@@ -848,7 +906,7 @@ public class EvaluationService {
 	}
 */
 	
-	/**	Question 20
+	/**	Question 20	- PASS
 	 * 20. Parse and evaluate simple math word problems returning the answer as an
 	 * integer.
 	 * 
@@ -875,10 +933,58 @@ public class EvaluationService {
 	 * @param string
 	 * @return
 	 */
+//	/*	Question 20	- PASS
 //	/*	Question 20
 	public int solveWordProblem(String string) {
-		// TODO Write an implementation for this method declaration
-		return 0;
-	}
+	// TODO Write an implementation for this method declaration
+        String numeric = "0123456789";
+        System.out.println("We recieved the data: \n" + string + "\n");
+        int[] problem = new int[2];
+        String digit = "";
+        int index = 0;
+        boolean negative = false;
+        for(int i = 0; i < string.length(); i++) {
+            String current = "" + string.charAt(i);
+            if (current.equals("-")) 
+                negative = true;
+            if (numeric.contains(current)) {
+                digit += current;
+                String next = "" + string.charAt(i+1);
+                if (!numeric.contains(next)) {
+                    int finished = Integer.parseInt(digit);
+                    if (negative) {
+                        finished *= -1;
+                    }
+                    problem[index] = finished;
+                    index++;
+                    negative = false;
+                    digit = "";
+                }
+            }
+        }
+        int a = problem[0];
+        int b = problem[1];
+        if (string.contains("plus")) {
+        	System.out.println("We added: " + a + " + " + b + "\n");
+            return a + b;
+        }        	
+        else if (string.contains("minus")) {
+        	System.out.println("We subtracted: " + a + " - " + b + "\n");
+        	return a - b;
+        }            
+        else if (string.contains("multiplied")) {
+        	System.out.println("We multiplied: " + a + " * " + b + "\n");
+        	return a * b;
+        }            
+        else if (string.contains("divided")) {
+        	System.out.println("We divided: " + a + " / " + b + "\n");
+        	return a / b;
+        }            
+        else {
+        	System.out.println("We returned: " + 0 + "\n");
+        	return 0;
+        }
+            
+    }
 //	*/
 }

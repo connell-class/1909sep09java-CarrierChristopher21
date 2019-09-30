@@ -1,14 +1,12 @@
 package carCustomer;
 
 import java.util.ArrayList;
-//import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
 
 import carPrinter.CarNotValid;
 import carPrinter.CarPrinter;
 import carSerializer.UserDataAccessor;
-import carSerializer.UserSerializer;
 
 public class CustomerRunner {
 	CustomerData aCustomerData = new CustomerData();
@@ -26,19 +24,14 @@ public class CustomerRunner {
 			22, "n/a", "255 SW 11th St", "Miami", "33130", "657-252-3978" );	
 	
 	
-	static UserDataAccessor access;
-
-	
-	
-	public String CustomerHavic(String answer, Scanner sIn) {
-		access = new UserSerializer();
+	public String CustomerHavic(String answer, Scanner sIn, String file, UserDataAccessor access) {
 		
-		String file = "./Data_Files/UserData.txt";
+		
 		
 //			Declare Variable Labeling
 		String userName = "n/a", password = "n/a";
-		String fName = "n/a", lName = "n/a", aEmail = "n/a", aAddress = "n/a";
-		String aCity = "n/a", aZip = "n/a", aPhone = "n/a";
+//		String fName = "n/a", lName = "n/a", aEmail = "n/a", aAddress = "n/a";
+//		String aCity = "n/a", aZip = "n/a", aPhone = "n/a";
 
 		int aAge = -1;
 		
@@ -48,59 +41,59 @@ public class CustomerRunner {
 		aCustomer.add(aCustomer2);
 		
 		
+		System.out.println("\nWelcome New Customer!");
+		System.out.println("Please fill out this form to start shopping with us! \n");
 		
 		//	Customer Username
 		System.out.print("\nPlease enter in your UserName ");
 		userName = sIn.nextLine();
+		aCustomerData.setUserName(userName);
 		
 		//	Customer Password
 		System.out.print("\nPlease enter in your Password ");
 		password = sIn.nextLine();
+		aCustomerData.setPassword(password);
 		
 		//	First Name Section
 		System.out.print("\nPlease enter in your First Name ");
-		fName = sIn.nextLine();	
+		answer = sIn.nextLine();	
+		aCustomerData.setFirstName(answer);
 		
 		//	Last Name Section
 		System.out.print("\nPlease enter in your Last Name ");
-		lName = sIn.nextLine();	
+		answer = sIn.nextLine();	
+		aCustomerData.setLastName(answer);
 		
 		//	Age Section
 		System.out.print("\nPlease enter in your Age ");
-		//aAge = sIn.nextInt();	//	NextInt for some reason skips completely over Email.
 		aAge = Integer.parseInt(sIn.nextLine());
+		aCustomerData.setAge(aAge);
+		
 		//	Email Section
 		System.out.print("\nPlease enter in your Email ");
-		aEmail = sIn.nextLine();	
+		answer = sIn.nextLine();	
+		aCustomerData.setEmail(answer);
 		
 		//	Address Section
 		System.out.print("\nPlease enter in your Address ");
-		aAddress = sIn.nextLine();	
+		answer = sIn.nextLine();	
+		aCustomerData.setAddress(answer);
 		
 		//	City Section
 		System.out.print("\nPlease enter in your City ");
-		aCity = sIn.nextLine();	
+		answer = sIn.nextLine();	
+		aCustomerData.setCity(answer);
 		
 		//	Zip Code Section
 		System.out.print("\nPlease enter in your Zip Code ");
-		aZip = sIn.nextLine();	
+		answer = sIn.nextLine();	
+		aCustomerData.setZip(answer);
 		
 		//	Phone Number Section
 		System.out.print("\nPlease enter in your Phone Number ");
-		aPhone = sIn.nextLine();	
+		answer = sIn.nextLine();		
+		aCustomerData.setPhone(answer);
 		
-		
-		
-		aCustomerData.setUserName(userName);
-		aCustomerData.setPassword(password);
-		aCustomerData.setFirstName(fName);
-		aCustomerData.setLastName(lName);
-		aCustomerData.setAge(aAge);
-		aCustomerData.setEmail(aEmail);
-		aCustomerData.setAddress(aAddress);
-		aCustomerData.setCity(aCity);
-		aCustomerData.setZip(aZip);
-		aCustomerData.setPhone(aPhone);
 		
 		
 		System.out.println("\nOlly\n" + aCustomerData);

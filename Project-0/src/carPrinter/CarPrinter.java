@@ -8,6 +8,9 @@ public class CarPrinter {
         System.out.print(aString);
     }
 	
+    public void PrintMult(String aString) {
+    	System.out.println(aString);
+    }
     //  Print List Output
     public void PrintList(String aString)
     {
@@ -23,6 +26,11 @@ public class CarPrinter {
     	System.out.println("\n");
     }
     
+    public void PrintLogin(String aString) {
+
+    	System.out.println(aString);
+    	
+    }
     
     /*//  Employee List           -       4
     public void PrintEmployee(DataTable EmployeeTable)

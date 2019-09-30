@@ -1,6 +1,7 @@
 package carUser;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 /*
  * 	Serialize user information
@@ -11,18 +12,23 @@ import java.io.Serializable;
 
 public class UserData implements Serializable{
 	private static final long serialVersionUID = 1L;
-	private String idNumber;
+	private String userName;
 	private String password;	
 	private String firstName;
 	private String lastName;
 	
-	public String getIdNumber() {
-		return idNumber;
-	}	
-	public void setIdNumber(String idNumber) {
-		this.idNumber = idNumber;
-	}	
+	static ArrayList<UserData> entry = new ArrayList<>();
+//	private static Object UserEntry;
+	
 
+	public String getUserName() {
+		return userName;
+	}
+	
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+	
 	public String getPassword() {
 		return password;
 	}
@@ -42,9 +48,14 @@ public class UserData implements Serializable{
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
-	public UserData(String idNumber, String password, String firstName, String lastName) {
+	
+	public boolean passwordTest() {
+		return false;
+	}
+	
+	public UserData(String userName, String password, String firstName, String lastName) {
 		super();
-		this.idNumber = idNumber;
+		this.userName = userName;
 		this.password = password;		
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -52,12 +63,19 @@ public class UserData implements Serializable{
 	public UserData() {
 		super();
 		// TODO Auto-generated constructor stub
+	}	
+
+	public UserData(String userName, String password) {
+		super();
+		this.userName = userName;
+		this.password = password;
 	}
+
 	@Override
 	public String toString() {
 		String UserData = "";
 		UserData = "User Data \n";	
-		UserData += "ID Number = " + idNumber + "\n";	
+		UserData += "UserName = " + userName + "\n";	
 		UserData += "Password = " + password + "\n";	
 		UserData += "First Name = " + firstName + "\n";
 		UserData += "Last Name = " + lastName + "\n";

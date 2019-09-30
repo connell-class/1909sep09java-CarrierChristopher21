@@ -7,7 +7,6 @@ import java.util.Scanner;
 import carPrinter.CarNotValid;
 import carPrinter.CarPrinter;
 import carSerializer.UserDataAccessor;
-import carSerializer.UserSerializer;
 
 public class EmployeeRunner {
 	
@@ -20,14 +19,16 @@ public class EmployeeRunner {
 	EmployeeData aEmployee2 = new EmployeeData("PolarBearAnnihilator", "n/a", "Rob", "Connell", 32, "n/a");
 	
 	
-	static UserDataAccessor access;
+
 	
-	public String EmployeeHavic(String answer, Scanner sIn) {
-		access = new UserSerializer();
+	public String EmployeeHavic(String answer, Scanner sIn, String file, 
+			UserDataAccessor access) {
+
 		System.out.println(aEmployeeData);
 //		Scanner sIn = new Scanner(System.in);
-		String file = "./Data_Files/EmployeeData.txt";
-		String  userName = "n/a", password = "n/a", fName = "n/a", lName = "n/a", aEmail = "n/a";
+		
+//		String  userName = "n/a", password = "n/a", fName = "n/a", lName = "n/a", 
+//		String aEmail = "n/a";
 		int aAge = -1;
 		List<EmployeeData> aEmployee = new ArrayList<EmployeeData>();
 		
@@ -37,39 +38,36 @@ public class EmployeeRunner {
 		
 		//	UserName Section
 		System.out.print("\nPlease enter your UserName ");
-		userName = sIn.nextLine();
-		
+		answer = sIn.nextLine();
+		aEmployeeData.setUserName(answer); 
 		//	anId = IDNumber.length();
 		//	ConvertUserID(IDNumber, anId);	
 		//	Link to different file to test number
 		
 		//	Password Section
 		System.out.print("\nPlease enter in your password: ");
-		password = sIn.nextLine();
-
+		answer = sIn.nextLine();
+		aEmployeeData.setPassword(answer);
+		
 		//	First Name Section
 		System.out.print("\nPlease enter in your first name ");
-		fName = sIn.nextLine();
+		answer = sIn.nextLine();
+		aEmployeeData.setFirstName(answer);
 		
 		//	Last Name Section
 		System.out.print("\nPlease enter in your last name ");
-		lName = sIn.nextLine();
+		answer = sIn.nextLine();
+		aEmployeeData.setLastName(answer);
 		
 		//	Age Section
 		System.out.print("\nPlease enter in your Age ");
-		aAge = sIn.nextInt();	//	NextInt for some reason skips completely over Email.
+		aAge = Integer.parseInt(sIn.nextLine());
+		aEmployeeData.setAge(aAge);
 		
 		//	Email Section
 		System.out.print("\nPlease enter in your Email ");
-		aEmail = sIn.nextLine();
-		
-		
-		aEmployeeData.setUserName(userName); 
-		aEmployeeData.setPassword(password);
-		aEmployeeData.setFirstName(fName);
-		aEmployeeData.setLastName(lName);
-		aEmployeeData.setEmail(aEmail);
-		aEmployeeData.setAge(aAge);
+		answer = sIn.nextLine();
+		aEmployeeData.setEmail(answer);
 		
 		
 		

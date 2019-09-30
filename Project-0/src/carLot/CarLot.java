@@ -1,13 +1,17 @@
-package carDealership;
+package carLot;
 
-public class CarLot {
-	private String brandName;
-	private String model;
-	private int year;
-	private int doors;
-	private int wheels;
-	private String typeOfVehicle;
-	private int howManyOnLot;
+import java.io.Serializable;
+
+public class CarLot implements Serializable{
+	
+
+	private static final long serialVersionUID = 1L;
+	private String brandName = "n/a";
+	private String model = "n/a";
+	private int year = -1;
+	private int howManyOnLot = -1;
+	private double price = 0;
+	
 	public String getBrandName() {
 		return brandName;
 	}
@@ -32,30 +36,6 @@ public class CarLot {
 		this.year = year;
 	}
 
-	public int getDoors() {
-		return doors;
-	}
-
-	public void setDoors(int doors) {
-		this.doors = doors;
-	}
-
-	public int getWheels() {
-		return wheels;
-	}
-
-	public void setWheels(int wheels) {
-		this.wheels = wheels;
-	}
-
-	public String getTypeOfVehicle() {
-		return typeOfVehicle;
-	}
-
-	public void setTypeOfVehicle(String typeOfVehicle) {
-		this.typeOfVehicle = typeOfVehicle;
-	}
-
 	public int getHowManyOnLot() {
 		return howManyOnLot;
 	}
@@ -64,32 +44,35 @@ public class CarLot {
 		this.howManyOnLot = howManyOnLot;
 	}
 
+	public double getPrice() {
+		return price;
+	}
+
+	public void setPrice(double price) {
+		this.price = price;
+	}
+
 	public CarLot(String brandName, String model, int year, int doors, int wheels, 
-			String typeOfVehicle, int howManyOnLot) {
+			int howManyOnLot) {
 		super();
 		this.brandName = brandName;
 		this.model = model;
 		this.year = year;
-		this.doors = doors;
-		this.wheels = wheels;
-		this.typeOfVehicle = typeOfVehicle;
 		this.howManyOnLot = howManyOnLot;
 	}	
 	public CarLot() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+	
+	
 	@Override
-
 	public String toString() {
 		String CarLot = "";
 		 CarLot = "Car Lot \n";
 		 CarLot += "Brand Name = " + brandName + "\n";
 		 CarLot += "Model = " + model + "\n";
 		 CarLot += "Year = " + year + "\n";
-		 CarLot += "Doors = " + doors + "\n";
-		 CarLot += "Wheels = " + wheels + "\n";
-		 CarLot += "Type Of Vehicle = " + typeOfVehicle + "\n";
 		 CarLot += "How Many On Lot = " + howManyOnLot + "\n";
 
 		 return CarLot;

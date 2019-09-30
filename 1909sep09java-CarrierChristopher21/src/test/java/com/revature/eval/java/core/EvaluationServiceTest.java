@@ -200,7 +200,7 @@ public class EvaluationServiceTest {
 	/*******************************************************************
 	 * Question 6
 	 ******************************************************************/
-//	/*	Question 6
+	/*	Question 6
 	@Test
 	public void countOneWord() {
 		Map<String, Integer> expectedWordCount = new HashMap<>();
@@ -255,7 +255,7 @@ public class EvaluationServiceTest {
 		Map<String, Integer> actualWordCount = evaluationService.wordCount("one,\ntwo,\nthree");
 		assertEquals(expectedWordCount, actualWordCount);
 	}
-//*/
+*/
 	/*******************************************************************
 	 * Question 7
 	 ******************************************************************/
@@ -409,7 +409,7 @@ public class EvaluationServiceTest {
 	/*******************************************************************
 	 * Question 11
 	 ******************************************************************/
-	/*	Question 11
+//	/*	Question 11
 	@Test
 	public void rotateSingleCharacterWithWrapAround() {
 		EvaluationService.RotationalCipher rotationalCipher = new EvaluationService.RotationalCipher(13);
@@ -440,7 +440,7 @@ public class EvaluationServiceTest {
 		assertEquals("The quick brown fox jumps over the lazy dog.",
 				rotationalCipher.rotate("Gur dhvpx oebja sbk whzcf bire gur ynml qbt."));
 	}
-*/
+//*/
 	/*******************************************************************
 	 * Question 12
 	 ******************************************************************/
