@@ -3,17 +3,14 @@ package carRunners;
 import java.util.Scanner;
 import java.util.logging.Logger;
 
-import carCustomer.CustomerSort;
-import carDealership.Dealership;
+import carDealerShip.Dealership;
 import carDriverPerson.CarHuman;
 import carEmployee.EmployeeSort;
 import carLogin.CarLogin;
 import carLot.CarDriver;
 import carLot.CarRunner;
 import carPrinter.CarNotValid;
-import carSystem.SystemRunner;
 import carTestNumber.CarTestNumber;
-import carUser.UserSort;
 
 public class DealershipProgramDisplayFile extends CarHuman{
 
@@ -25,13 +22,10 @@ public class DealershipProgramDisplayFile extends CarHuman{
 		Dealership aDealership = new Dealership();
 		int numId = -1;
 		//	User - 1
-		UserSort aUserSort = new UserSort();
 		//	Employee - 2
 		EmployeeSort aEmployeeSort = new EmployeeSort();
-		//	Customer - 3
-		CustomerSort aCustomerSort = new CustomerSort();
 		//	System - 4
-		SystemRunner aSysRunner = new SystemRunner();
+//		SystemRunner aSysRunner = new SystemRunner();
 		//	Not Valid
 		CarNotValid aNotValid = new CarNotValid();
 		// Car TestNumber
@@ -55,7 +49,6 @@ public class DealershipProgramDisplayFile extends CarHuman{
             if(pass == true)
             {
             	anSwitchId = Integer.parseInt(answer);
-                
 				answer = ProgramConverter(anSwitchId, answer, sIn, CarLog);
             }
             else
@@ -70,8 +63,7 @@ public class DealershipProgramDisplayFile extends CarHuman{
 			if(anSwitchId > 0 && anSwitchId <= 4 && answer != "") {				
 				switch(anSwitchId) {
 					case 1:	//	User
-//						answer = aCarLogin.CustomerSortHavic(answer, sIn, CarLog);
-						answer = aUserSort.UserSortHavic(answer, sIn);
+						answer = aCarLogin.CustomerSortHavic(answer, sIn, CarLog);
 						//	Create Customer Account - Create setup / Register Form
 						break;					
 					case 2:	//	Car Collection
